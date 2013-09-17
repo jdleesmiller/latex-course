@@ -5,11 +5,16 @@
 \usepackage[english]{babel}
 \usepackage{amsmath}
 \usepackage{color}
-\usepackage{hyperref}
 \usepackage{minted}
+\usepackage{hyperref}
 \usepackage{multicol}
 \usepackage{tabularx}
 \usepackage{tikz}
+
+% only inline todonotes work
+\usepackage{xkeyval}
+\usepackage[textsize=small]{todonotes}
+\presetkeys{todonotes}{inline}{}
 
 \usetikzlibrary{shapes,arrows,positioning,shadows}
 
@@ -28,10 +33,14 @@
 
 \newcommand{\wllogo}{\textbf{write\textrm{\LaTeX}}}
 
-\newcommand{\fileuri}{https://dl.dropbox.com/u/31383671/site/latex\_course\_v2}
-%\newcommand{\wlserver}{http://localhost:3000}
+% this is where the example source files are loaded from
+% do not include a trailing slash
+\newcommand{\fileuri}{http://jdleesmiller.github.io/latex-course/en}
+
 \newcommand{\wlserver}{https://www.writelatex.com}
 \newcommand{\wlnewdoc}[1]{\wlserver/docs?snip\_uri=\fileuri/#1\&splash=none}
+
+\def\tikzname{Ti\emph{k}Z}
 
 % from http://tex.stackexchange.com/questions/5226/keyboard-font-for-latex
 \newcommand*\keystroke[1]{%
@@ -80,8 +89,24 @@
    \end{minipage}
    \end{tabular}}}
 
+\newenvironment{exampletwouptinynoframe}
+  {\VerbatimEnvironment
+   \begin{VerbatimOut}{example.out}}
+  {\end{VerbatimOut}
+   \setlength{\parindent}{0pt}
+   \begin{tabular}{l|l}
+   \begin{minipage}{0.55\linewidth}
+     \inputminted[fontsize=\scriptsize,resetmargins]{latex}{example.out}
+   \end{minipage} &
+   \begin{minipage}{0.35\linewidth}
+     \setlength{\parskip}{6pt plus 1pt minus 1pt}%
+     \raggedright\scriptsize\input{example.out}
+   \end{minipage}
+   \end{tabular}}
+
 \title{An Interactive Introduction to \LaTeX}
-\author{Dr John D. Lees-Miller\\[1em]
+\author{Dr John D. Lees-Miller}
+\titlegraphic{%
 \includegraphics[page=4]{wllogo-series}\\[1em]
 \includegraphics[height=24pt]{UoB-logo}
 \qquad

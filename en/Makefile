@@ -3,14 +3,14 @@ all: part1.pdf part2.pdf part3.pdf
 #
 # Part 1
 #
-part1.pdf: part1.tex
+part1.pdf: part1.tex preamble.tex
 	pdflatex -shell-escape part1
 	pdflatex -shell-escape part1
 
 #
 # Part 2
 #
-part2.pdf: part2.tex structure-title.pdf structure-sections.pdf structure-crossref.pdf media-graphics.pdf bib-example.pdf
+part2.pdf: part2.tex preamble.tex structure-title.pdf structure-sections.pdf structure-crossref.pdf media-graphics.pdf bib-example.pdf
 	pdflatex -shell-escape part2
 	pdflatex -shell-escape part2
 
@@ -42,7 +42,7 @@ bib-example.pdf: bib-example.tex bib-example.bib
 #
 # Part 3
 #
-part3.pdf: part3.tex recap-structure.pdf recap-exercise.pdf recap-exercise-solution.pdf beamer-minimal.pdf beamer-theme.pdf beamer-exercise.pdf beamer-exercise-solution.pdf
+part3.pdf: part3.tex preamble.tex recap-structure.pdf recap-exercise.pdf recap-exercise-solution.pdf beamer-minimal.pdf beamer-theme.pdf beamer-exercise.pdf beamer-exercise-solution.pdf
 	pdflatex -shell-escape part3
 	pdflatex -shell-escape part3
 
@@ -74,3 +74,6 @@ latex-course.tgz: all
 
 clean:
 	rm -f *.log *.aux *.out *.nav *.snm *.toc *.vrb *.pyg *.bbl *.blg
+
+clobber: clean
+	rm -f part1.pdf part2.pdf part3.pdf
