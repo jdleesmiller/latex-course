@@ -1,0 +1,593 @@
+\documentclass{beamer}
+
+\input{preamble.tex}
+
+\subtitle{Part 2: Structured Documents \& More}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Structured Documents}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Outline}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\insertsection}
+\begin{itemize}
+\item In Part 1, we learned about commands and environments for typesetting text
+and mathematics.
+\item Now, we'll learn about commands and environments for structuring
+documents.
+\item You can try out the new commands in write\LaTeX{}:
+\end{itemize}
+\vskip 2em
+\begin{center}
+\fbox{\href{\wlnewdoc{basics.tex}}{%
+Click here to open the example document in \wllogo{}}}
+\\[1ex]\scriptsize{}Or go to this URL: \url{http://bit.ly/WU0bMU}\\
+For best results, please use \href{http://www.google.com/chrome}{Google Chrome} or a recent \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}.
+\end{center}
+\vskip 2ex
+\begin{itemize}
+\item Let's get started!
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Title and Abstract}
+\begin{frame}[fragile]{\insertsubsection}
+\begin{itemize}{\small
+\item Tell \LaTeX{} the \cmdbs{title} and \cmdbs{author} names in the preamble.
+\item Then use \cmdbs{maketitle} in the document to actually create the title.
+\item Use the \bftt{abstract} environment to make an abstract.
+}\end{itemize}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {structure-title.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=2.2in 7in 2.2in 2in]{structure-title.pdf}
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Sections}
+\begin{frame}{\insertsubsection}
+\begin{itemize}{\small
+\item Just use \cmdbs{section} and \cmdbs{subsection}.
+\item Can you guess what \cmdbs{section*} and \cmdbs{subsection*} do?
+}\end{itemize}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {structure-sections.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=1.5in 6in 4in 1in]{structure-sections.pdf}
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Labels and Cross-References}
+\begin{frame}[fragile]{\insertsubsection}
+\begin{itemize}{\small
+\item Use \cmdbs{label} and \cmdbs{ref} for automatic numbering.
+\item The \bftt{amsmath} package provides \cmdbs{eqref} for referencing
+equations.
+}\end{itemize}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {structure-crossref.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=1.8in 6in 1.6in 1in]{structure-crossref.pdf}
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Exercise}
+\begin{frame}[fragile]{Structured Documents Exercise}
+
+\begin{block}{Typeset this short paper in \LaTeX:
+\footnote{From \url{http://pdos.csail.mit.edu/scigen/}, a random
+paper generator.}}
+\begin{center}
+\fbox{\href{\fileuri/structure-exercise-solution.pdf}{%
+Click to open the paper}}
+\end{center}
+Make your paper look like this one. Use \cmdbs{ref} and \cmdbs{eqref} to avoid
+explicitly writing section and equation numbers into the text.
+\end{block}
+\vskip 2ex
+\begin{center}
+\fbox{\href{\wlnewdoc{structure-exercise.tex}}{%
+Click to open this exercise in \wllogo{}}}
+\end{center}
+
+\begin{itemize}
+\item Once you've tried,
+\fbox{\href{\wlnewdoc{structure-exercise-solution.tex}}{%
+click here to see my solution}}.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Figures and Tables}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Outline}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Graphics}
+\begin{frame}[fragile]{\insertsubsection}
+\begin{itemize}
+\item Requires the \bftt{graphicx} package, which provides the
+\cmdbs{includegraphics} command.
+\item Supported graphics formats include JPEG, PNG and PDF (usually). 
+\end{itemize}
+\begin{exampletwouptiny}
+\includegraphics[
+  width=0.5\textwidth]{big_chick}
+
+\includegraphics[
+  width=0.3\textwidth,
+  angle=270]{big_chick}
+\end{exampletwouptiny}
+
+\tiny{Image from \url{http://www.andy-roberts.net/writing/latex/importing_images}}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Interlude: Optional Arguments}
+\begin{itemize}
+\item We use square brackets \keystrokebftt{[} \keystrokebftt{]} for optional
+arguments, instead of braces \keystrokebftt{\{} \keystrokebftt{\}}.
+\item \cmdbs{includgraphics} accepts optional arguments that allow you to transform the
+image when it is included. For example, \bftt{width=0.3\cmdbs{textwidth}} makes
+the image take up 30\% of the width of the surrounding text (\cmdbs{textwidth}).
+\item \cmdbs{documentclass} accepts optional arguments, too. Example:
+\mint{latex}|\documentclass[12pt,twocolumn]{article}|
+\vskip 3ex
+makes the text bigger (12pt) and puts it into two columns.
+\item Where do you find out about these? See the slides at the end of this
+presentation for links to more information.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection[fragile]{Floats}
+\begin{frame}{\insertsubsection}
+\begin{itemize}
+\item Allow \LaTeX{} to decide where the figure will go (it can ``float'').
+\item You can also give the figure a caption, which can be referenced with
+\cmdbs{ref}.
+\end{itemize}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {media-graphics.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=2in 5in 3in 1in]{media-graphics.pdf}
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tables}
+\begin{frame}[fragile]{\insertsubsection}
+\begin{itemize}
+\item Tables in \LaTeX{} take some getting used to.
+\item Use the \bftt{tabular} environment from the \bftt{tabularx} package.
+\item The argument specifies column alignment --- \textbf{l}eft, \textbf{r}ight, \textbf{r}ight.
+\begin{exampletwouptiny}
+\begin{tabular}{lrr}
+Item   & Qty & Unit \$ \\
+Widget & 1   & 199.99  \\
+Gadget & 2   & 399.99  \\
+Cable  & 3   & 19.99   \\
+\end{tabular}
+\end{exampletwouptiny}
+\item It also specifies vertical lines; use \cmdbs{hline} for horizontal lines.
+\begin{exampletwouptiny}
+\begin{tabular}{|l|r|r|} \hline
+Item   & Qty & Unit \$ \\\hline
+Widget & 1   & 199.99  \\
+Gadget & 2   & 399.99  \\
+Cable  & 3   & 19.99   \\\hline
+\end{tabular}
+\end{exampletwouptiny}
+\item Use an ampersand \keystrokebftt{\&} to separate columns and a double backslash \keystrokebftt{\bs}\keystrokebftt{\bs} to start a new row (like in the \bftt{align*} environment that we saw in part 1).
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtocontents{toc}{\newpage}
+\section{Bibliographies}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Outline}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{bib\TeX}
+\begin{frame}[fragile]{\insertsubsection{} 1}
+\begin{itemize}
+\item Put your references in a \bftt{.bib} file in `bibtex' database format:
+\inputminted[fontsize=\scriptsize,frame=single]{latex}{bib-example.bib}
+\item Most reference managers can export to bibtex format.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsubsection{} 2}
+\begin{itemize}
+\item Each entry in the \bftt{.bib} file has a \emph{key} that you can use to
+reference it in the document. For example, \bftt{Jacobson1999Towards} is the key for this article:
+\begin{minted}[fontsize=\small,frame=single]{latex}
+@Article{Jacobson1999Towards,
+  author = {Van Jacobson},
+  ...
+}
+\end{minted}
+\item It's a good idea to use a key based on the name, year and title.
+\item \LaTeX{} can automatically format your in-text citations and generate a
+list of references; it knows most standard styles, and you can design your own.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsubsection{} 3}
+\begin{itemize}
+\item Use the \bftt{natbib} package (recommended).
+\item Use \cmdbs{citet} and \cmdbs{citep} to insert citations by key.
+\item Reference \cmdbs{bibliography} at the end, and specify a \cmdbs{bibliographystyle}.
+\end{itemize}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {bib-example.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=1.8in 5in 1.8in 1in]{bib-example.pdf}
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Exercise}
+\begin{frame}[fragile]{Exercise: Putting it All Together}
+
+Add an image and a bibliography to the paper from the previous exercise.
+
+\begin{enumerate}
+\item Download these example files to your computer.
+
+\begin{center}
+\fbox{\href{\fileuri/big_chick.png?dl=1}{Click to download example image}}
+
+\fbox{\href{\fileuri/bib-exercise.bib?dl=1}{Click to download example bib file}}
+\end{center}
+
+\item Upload them to writeLaTeX (use the files menu).
+
+\item (To find the keys in the \bftt{.bib} file, you'll have to open it in
+Notepad on your computer --- you can't view it online in writeLaTeX, yet.)
+
+\end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{What's Next?}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Outline}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{More Neat Things}
+\begin{frame}[fragile]{\insertsubsection}
+\begin{itemize}
+\item Add the \cmdbs{tableofcontents} command to generate a table of contents
+from the \cmdbs{section} commands.
+
+\item Change the \cmdbs{documentclass} to
+\mint{latex}!\documentclass{scrartcl}!
+or
+\mint{latex}!\documentclass[12pt]{IEEEtran}!
+
+\item Define your own command for a complicated equation:
+\begin{exampletwouptiny}
+\newcommand{\rperf}{%
+  \rho_{\text{perf}}}
+$$
+\rperf = {\bf c}'{\bf X} + \varepsilon
+$$
+\end{exampletwouptiny}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{More Neat Packages}
+\begin{frame}{\insertsubsection}
+\begin{itemize}
+\item \bftt{beamer}: for presentations (like this one!)
+\item \bftt{todonotes}: comments and TODO management
+\item \bftt{tikz}: make amazing graphics
+\item \bftt{pgfplots}: create graphs in \LaTeX
+\item \bftt{spreadtab}: create spreadsheets in \LaTeX
+\item \bftt{gchords}, \bftt{guitar}: guitar chords and tabulature
+\item \bftt{cwpuzzle}: crossword puzzles
+\end{itemize}
+See \url{https://www.writelatex.com/examples} and \url{http://texample.net} for
+examples of (most of) these packages.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Installing \LaTeX{}}
+\begin{frame}{\insertsubsection}
+\begin{itemize}
+\item To run \LaTeX{} on your own computer, you'll want to use a \LaTeX{}
+\emph{distribution}. A distribution includes a \bftt{latex} program
+and (typically) several thousand packages.
+\begin{itemize}
+\item On Windows: \href{http://miktex.org/}{Mik\TeX}
+\item On Linux: \href{http://tug.org/texlive/}{\TeX Live}
+\item On Mac: \href{http://tug.org/mactex/}{Mac\TeX}
+\end{itemize} 
+\item You'll also want a text editor with \LaTeX{} support. See \url{http://en.wikipedia.org/wiki/Comparison_of_TeX_editors} for a list of (many) options.
+\item You'll also have to know more about how \bftt{latex} and its related tools
+work --- see the resources on the next slide.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Online Resources}
+\begin{frame}{\insertsubsection}
+\begin{itemize}
+\item \href{http://en.wikibooks.org/wiki/LaTeX}{The \LaTeX{} Wikibook} ---
+excellent tutorials and reference material.
+\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- ask
+questions and get excellent answers incredibly quickly
+\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- a large
+online forum 
+\item \href{http://ctan.org/}{Comprehensive \TeX{} Archive Network (CTAN)} ---
+over four thousand packages plus documentation
+\item Google will usually get you to one of the above.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\begin{center}
+Thanks, and happy \TeX{}ing!
+\end{center}
+\end{frame}
+
+\end{document}
+
+% -- latex understands words, sentences and paragraphs
+
+Words are separated by one or more spaces.  Paragraphs are separated by
+one or more blank lines.  The output is not affected by adding extra
+spaces or extra blank lines to the input file.
+
+Double quotes are typed like this: ``quoted text''.
+Single quotes are typed like this: `single-quoted text'.
+
+Emphasized text is typed like this: \emph{this is emphasized}.
+Bold       text is typed like this: \textbf{this is bold}.
+
+-- Adding structure to your document
+
+\section{Hello}
+
+\subsection{World}
+
+\subsection{Foo}
+
+\subsubsection*{Stuff} % star form
+
+\subsubsection*{Results}
+
+-- Labels and cross-references
+
+\label{sec:intro}
+\label{sec:method}
+\ref{sec:method}
+
+--> maybe introduce the prettyref package here.
+
+-- Mathematics
+
+Inline mathematics: $x + y < 7$.
+
+'Displayed' mathematics:
+\begin{equation}
+\end{equation}
+
+\begin{equation*}
+\end{equation*}
+
+\begin{align}
+\end{align}
+
+-- Figures
+
+- Need the graphicx package.
+
+- here we can start introducing options
+
+\includegraphics[width=\textwidth]{}
+
+- where do you find out about these options? --> link to the Wikibook
+
+-- Floating Figures
+
+\begin{figure}
+\includegraphics{...}
+\caption{\label{}Here is a caption.}
+\end{figure}
+
+-- Tables
+
+- not the nicest part of LaTeX
+
+\usepackage{tabularx}
+
+\begin{tabular}{llr}
+Item & Quantity & Price (\$) & Amount
+Widget & 1 & 
+\end{tabular}
+
+Bonus points: check out the fp package and the spreadtab package.
+
+-- Document Classes
+
+a .cls file
+
+article
+
+some journal templates come with one
+
+-- Bibliographies
+
+
+
+-- For Typesetting Geeks
+
+- dashes: -, --, ---
+
+- ellipsis.
+
+- controlling spaces: ~, \ , \,, \@
+
+- spacing after periods (et al., etc.)
+
+- Nested quotation marks: ``\,`
+\vskip 2ex
+\item Use the \emph{star form} to display an equation without a number.
+\begin{exampletwouptiny}
+\begin{equation*}
+F(x) = \int_{a}^{x}{f(t) dt}
+\end{equation*}
+\end{exampletwouptiny}
+
+\begin{itemize}
+\item \bftt{equation} and \bftt{equation*} are called \emph{environments}.
+\begin{itemize}
+  \item The \cmdbs{begin} and \cmdbs{end} commands define the environment.
+  \item The \cmd{\$} also starts and ends an environment.
+  \item Some commands are defined only within certain environments.
+  \item Some commands behave differently in different environments.
+\end{itemize}
+\end{itemize}
+\end{block}
+\begin{center}
+\fbox{\href{http://ctan.org/}{The Comprehensive \TeX Archive Network (CTAN)}}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Typography tweaks}
+\begin{frame}{\insertsubsection}
+\begin{tabular}{lll}
+& character name & used mainly for \ldots \\\hline
+\bftt{\bs} & backslash                 & commands, tables \\
+\bftt{\{}  & open brace                & commands \\
+\bftt{\}}  & close brace               & commands \\
+\bftt{\%}  & percent sign              & comments \\
+\bftt{\#}  & hash (pound / sharp) sign & custom commands \\
+\bftt{\$}  & dollar sign               & equations \\
+\bftt{\_}  & underscore                & equations (subscripts) \\
+\bftt{\^}  & caret                     & equations (superscripts) \\
+\bftt{\&}  & ampersand                 & tables \\
+\bftt{\~}  & tilde                     & spacing \\
+\end{tabular}
+\end{frame}
+
+%\item We've used several environments:
+%\vskip 1ex
+%{\scriptsize
+%\begin{tabular}{ll}
+%\cmdbs{begin}\bftt{\{document\}}\ldots\cmdbs{end}\bftt{\{document\}} &
+%  document environment \\
+%\cmdbs{begin}\bftt{\{itemize\}}\ldots\cmdbs{end}\bftt{\{itemize\}} &
+%  itemized list environment \\
+%\bftt{\$\ldots\$}     & \emph{in-text} math environment \\
+%\bftt{\$\$\ldots\$\$} & \emph{displayed} math environment \\
+%\cmdbs{begin}\bftt{\{equation\}}\ldots\cmdbs{end}\bftt{\{equation\}} &
+%  displayed math environment w/ number
+%\end{tabular}
+%}
+
