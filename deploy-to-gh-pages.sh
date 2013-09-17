@@ -30,7 +30,6 @@ echo '<html><head><title>latex-course</title></head><body><a href="https://githu
 
 cd ..
 
-exit
 # destroy current content of the gh-pages branch
 git checkout gh-pages
 git rm -rf .
