@@ -1,0 +1,14 @@
+*.log
+*.aux
+*.out
+*.nav
+*.snm
+*.toc
+*.vrb
+*.pyg
+*.bbl
+*.blg
+.*.swp
+en/part1.pdf
+en/part2.pdf
+en/part3.pdf
