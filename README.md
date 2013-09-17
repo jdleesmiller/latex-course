@@ -13,7 +13,7 @@ These slides were originally used to deliver two two-hour workshops, but there i
 1. [Structed Documents &
 More](http://jdleesmiller.github.io/latex-course/en/part2.pdf): titles, sections, cross-references, figures, tables, bibliographies.
 
-1. [Not Just Papers](http://jdleesmiller.github.io/latex-course/en/part3.pdf): Presentations & More: recap exercise, presentations with beamer, drawings with
+1. [Not Just Papers: Presentations & More](http://jdleesmiller.github.io/latex-course/en/part3.pdf): recap exercise, presentations with beamer, drawings with
 tikz.
 
 Feel free to use however you like --- contributions welcome!
