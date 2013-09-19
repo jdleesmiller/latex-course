@@ -32,6 +32,18 @@ highlighting. It is installed by default in recent versions of TeX Live.
 1. There is a simple `Makefile` that manages the build. To use it, you'll
 probably need to be on Linux, and you will need `make`. 
 
+The slides include links to exercises that open in writeLaTeX. The exercise
+source files are hosted on the github page for this repository. If you want to
+use exercise files in another location, you can change the `\fileuri` macro in
+`preamble.tex`:
+```
+\newcommand{\fileuri}{http://jdleesmiller.github.io/latex-course/en}
+```
+
+The `deploy-to-gh-pages.sh` script builds the slides using the Makefile and
+copies the slides and the files required for the exercises over to the
+`gh-pages` branch, which github makes available at `deploy-to-gh-pages.sh`.
+
 License
 -------
 
