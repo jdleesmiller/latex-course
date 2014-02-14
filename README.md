@@ -36,16 +36,20 @@ The relevant package is python-pygments in Debian / Ubuntu
 probably need to be on Linux, and you will need `make`. 
 
 The slides include links to exercises that open in writeLaTeX. The exercise
-source files are hosted on the github page for this repository. If you want to
-use exercise files in another location, you can change the `\fileuri` macro in
-`preamble.tex`:
+source files are hosted on github. If you want to use exercise files in another
+location, you can [fork](https://help.github.com/articles/fork-a-repo) this
+github repository and then change the `\fileuri` macro in `preamble.tex`:
 ```
-\newcommand{\fileuri}{http://jdleesmiller.github.io/latex-course/en}
+\newcommand{\fileuri}{https://raw.github.com/jdleesmiller/latex-course/master/en}
 ```
+so that instead of pointing to `jdleesmiller/latex-course`, it points to
+`your-github-user-name/latex-course`. Then, once you've pushed your changed
+exercise files to github, the slides will load them up in writeLaTeX.
 
 The `deploy-to-gh-pages.sh` script builds the slides using the Makefile and
-copies the slides and the files required for the exercises over to the
-`gh-pages` branch, which github makes available at `deploy-to-gh-pages.sh`.
+copies the slides over to the `gh-pages` branch, which is available at
+`https://jdlm.info/latex-course` thanks to
+[github pages](http://pages.github.com/).
 
 License
 -------
