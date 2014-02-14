@@ -72,7 +72,7 @@ latex-course.tgz: part1.pdf part2.pdf part3.pdf basics-exercise-1-solution.tex b
 	tar czf latex-course.tgz $^
 
 clean:
-	rm -f *.log *.aux *.out *.nav *.snm *.toc *.vrb *.pyg *.bbl *.blg
+	rm -f *.log *.aux *.out *.nav *.snm *.toc *.vrb *.pyg *.bbl *.blg structure-crossref.pdf structure-sections.pdf structure-title.pdf media-graphics.pdf bib-example.pdf
 
 clobber: clean
 	rm -f part1.pdf part2.pdf part3.pdf
