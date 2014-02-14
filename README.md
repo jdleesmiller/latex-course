@@ -27,7 +27,10 @@ to build the slides yourself.
 1. The [minted package](http://www.ctan.org/pkg/minted) provides syntax
 highlighting. It is installed by default in recent versions of TeX Live.
 
-1. The minted package calls out to the [pygments syntax highlighter](http://pygments.org/), which is written in python.
+1. The minted package calls out to the
+[pygments syntax highlighter](http://pygments.org/), which is written in python.
+The relevant package is python-pygments in Debian / Ubuntu
+(`sudo apt-get install python-pygments`).
 
 1. There is a simple `Makefile` that manages the build. To use it, you'll
 probably need to be on Linux, and you will need `make`. 
