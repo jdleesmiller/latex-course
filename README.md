@@ -59,6 +59,7 @@ The slides and source are released under the MIT license. See the LICENSE file.
 Credits
 -------
 
+* Diana A -- found that exercise links had broken
 * Sana A -- pointed out an error in part 1
 * Andy Roberts -- the chick(en) image is from [one of his articles](http://www.andy-roberts.net/writing/latex/importing_images)
 * Ruby Trinh -- for organising the original short courses
