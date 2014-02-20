@@ -10,7 +10,7 @@ part1.pdf: part1.tex preamble.tex
 #
 # Part 2
 #
-part2.pdf: part2.tex preamble.tex structure-title.pdf structure-sections.pdf structure-crossref.pdf media-graphics.pdf bib-example.pdf
+part2.pdf: part2.tex preamble.tex structure-title.pdf structure-sections.pdf structure-crossref.pdf media-graphics.pdf bib-example.pdf structure-exercise-solution.pdf
 	pdflatex -shell-escape part2
 	pdflatex -shell-escape part2
 
