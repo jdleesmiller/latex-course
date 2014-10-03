@@ -145,23 +145,23 @@ an \bftt{article}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{} com \wllogo}
 \begin{itemize}
-\item \wllogo é um  \emph{website} para escrever documentos em 
-\LaTeX.
+\item \wllogo é um  \emph{site} da internet para escrever documentos em 
+\LaTeX{}.
 \item O \emph{site} `compila' seu \LaTeX{} automaticamente e mostra os
-resultados.
+resultados, isto é, o PDF.
 \vskip 2em
 \begin{center}
 \fbox{\href{\wlnewdoc{basics.tex}}{%
-Clique aqui para abrir um exemplo do documento no \wllogo{}}}
-\\
-Para melhores resultados,  utilize
+Clique aqui para abrir um documento  no \wllogo{}}}
+\\[.5ex]
+{\small Para melhores resultados,  utilize
 \href{http://www.google.com/chrome}{Google Chrome} ou uma versão recente do 
-\href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}.
+\href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}. }
 \end{center}
 \vskip 2ex
 \item Conforme sigamos para os próximos \emph{slides}, tente os exemplos,
 digitando-os no documento exemplo do \LaTeX.
-\item \textbf{De fato, você deve tentar durante o curso!}
+\item \textbf{Para aprender você deve tentar durante o curso!}
 \end{itemize}
 \end{frame}
 
@@ -169,49 +169,53 @@ digitando-os no documento exemplo do \LaTeX.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Typesetting Text}
+\subsection{Digitando Texto}
 \begin{frame}[fragile]{\insertsubsection{}}
 \small
 \begin{itemize}
-\item Type your text between \cmdbegin{document} and \cmdend{document}.
-\item For the most part, you can just type your text normally.
+\item Digite seu texto entre os comandos \cmdbegin{document} e
+\cmdend{document}.
+\item Na maior parte do tempo, você pode digitar o texto normalmente.
 \begin{exampletwouptiny}
-Words are separated by one or more
-spaces.
+Palavras são separadas por um ou mais
+espaços.
 
-Paragraphs are separated by one
-or more blank lines. 
+Parágrafos são separados por uma
+ou mais linhas em branco.
 \end{exampletwouptiny}
-\item Space in the source file is collapsed in the output.
+\item Espaços a mais no código-fonte serão eliminados no arquivo-saída.
 \begin{exampletwouptiny}
-The   rain       in Spain
-falls mainly on the plain.
+A    chuva   na       amazônia
+cai    na Horizontal.
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Caveats}
+\begin{frame}[fragile]{\insertsubsection{}: Advertências}
 \small
 \begin{itemize}
-\item Quotation marks are a bit tricky: use a backtick \keystroke{\`{}} on the left and an apostrophe \keystroke{\'{}} on the right.
+\item Marcas de citação são um pouco chatas: use uma
+crase \keystroke{`} na esquerda e um apóstrofo 
+\keystroke{'} na direita.
 \begin{exampletwouptiny}
-Single quotes: `text'.
+Aspas simples: `texto'.
 
-Double quotes: ``text''.
+Aspas duplas: ``texto''.
 \end{exampletwouptiny}
 
-\item Some common characters have special meanings in \LaTeX:\\[1ex]
+\item Alguns caracteres comuns tem significado especial no  \LaTeX:\\[1ex]
 \begin{tabular}{cl}
-\keystrokebftt{\%} & percent sign              \\
-\keystrokebftt{\#} & hash (pound / sharp) sign \\
-\keystrokebftt{\&} & ampersand                 \\
-\keystrokebftt{\$} & dollar sign               \\
+\keystrokebftt{\%} & porcentagem              \\
+\keystrokebftt{\#} & \emph{hashtag} (jogo da velha) \\
+\keystrokebftt{\&} & ``E'' comercial                 \\
+\keystrokebftt{\$} & cifrão               \\
 \end{tabular}
-\item If you just type these, you'll get an error. If you want one to appear in
-the output, you have to \emph{escape} it by preceding it with a backslash.
+\item Se você apenas digitá-los, você terá um erro. Se você quiser que algum
+deles apareça, tera que utilizar uma barra invertida antes do símbolo.
 \begin{exampletwoup}
 \$\%\&\#!
 \end{exampletwoup}
@@ -221,22 +225,21 @@ the output, you have to \emph{escape} it by preceding it with a backslash.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Handling Errors}
+\begin{frame}[fragile]{Lidando com Erros}
 \begin{itemize}
-\item \LaTeX{} can get confused when it is trying to compile your document. If
-it does, it stops with an error, which you must fix before it will produce
-any output.
-\item For example, if you misspell \cmdbs{emph} as \cmdbs{meph}, \LaTeX{} will
-stop with an ``undefined control sequence'' error, because ``meph'' is not
-one of the commands it knows.
+\item \LaTeX{} pode se confundir ao compilar seu documento. Se isso acontecer,
+o programa parará e indicará um erro, o qual deverá ser corrigido antes de produzir o documento.
+\item Por exemplo, se você digitar o comando \cmdbs{emph} como \cmdbs{meph},
+\LaTeX{} irá parar com um erro ``\emph{undefined control sequence}'' (sequência de
+controle desconhecida) , já que ``meph'' não é um comando conhecido.
 \end{itemize}
-\begin{block}{Advice on Errors}
+\begin{block}{Recomendações para lidar com Erros}
 \begin{enumerate}
-\item Don't panic! Errors happen.
-\item Fix them as soon as they arise --- if what you just typed caused an error,
-you can start your debugging there.
-\item If there are multiple errors, start with the first one --- the cause may
-even be above it.
+\item Não entre em pânico. Erros  acontecem e são comuns.
+\item Corrija-os assim que eles aparecerem: --- se o que você digitou causou
+erro, deve \emph{debugar} a partir daquela linha.
+\item Se houver muitos erros, comece pelo primeiro:  --- a causa de um erro
+pode ser um outro erro anterior.
 \end{enumerate}
 \end{block}
 \end{frame}
