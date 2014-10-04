@@ -1,20 +1,21 @@
 \documentclass{article}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc} % Em MSW use latin1 no lugar de utf8
 \begin{document}
 
-% hints:
-% 1. you might want to use the amsmath package
-% 2. the command for an infinity symbol is \infty
+% Dicas:
+% 1. Talvez você queria utilzar o pacote amsmath
+% 2. o comando para o símbolo de infito é \infty
 
-Let X1, X2, ..., Xn be a sequence of independent and
-identically distributed random variables with
-E[Xi] = mu and Var[Xi] = sigma squared < infinity, 
-and let
+Sejam X1, X2, ..., Xn uma sequência de variáveis aleatórias
+independentes e distribuídas de forma igual com E[Xi] = mu e Var[Xi] = sigma
+ao quadrado < infinito, e denote
 
-Sn = 1/n times the sum for i from 1 to n of Xi
+Sn = 1/n vezes a soma para i de 1 a n de Xi
 
-denote their mean. Then as n approaches infinity, the
-random variables square root n(Sn - mu) converge in
-distribution to a normal N(0; sigma squared).
+suas médias. Então quando n tende ao infinito, as variáveis aleatórias raiz
+quadrada de  n(Sn - mu) convergem convergem em distribuição para uma normal N(0;
+sigma quadrado).
 
 \end{document}
-
