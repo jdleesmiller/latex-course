@@ -2,7 +2,7 @@
 
 \input{preamble.tex}
 
-\subtitle{Part 2: Structured Documents \& More}
+\subtitle{Parte 2: Documentos Estruturados \& muito mais}
 
 \begin{document}
 
@@ -16,12 +16,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Structured Documents}
+\section{Documentos Estruturados}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Outline}
+\begin{frame}{Sumário}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
 \end{multicols}
@@ -32,38 +32,36 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\insertsection}
 \begin{itemize}
-\item In Part 1, we learned about commands and environments for typesetting text
-and mathematics.
-\item Now, we'll learn about commands and environments for structuring
-documents.
-\item You can try out the new commands in write\LaTeX{}:
+\item Na Parte 1, aprendemos sobre comandos e ambientes para digitar textos e textos matemáticos.
+\item Agora, aprenderemos sobre comandos e ambientes para documentos estruturados.
+\item Você pode tentar os novos comandos no write\LaTeX{}:
 \end{itemize}
 \vskip 2em
 \begin{center}
 \fbox{\href{\wlnewdoc{basics.tex}}{%
-Click here to open the example document in \wllogo{}}}
-\\[1ex]\scriptsize{}Or go to this URL: \url{http://bit.ly/WU0bMU}\\
-For best results, please use \href{http://www.google.com/chrome}{Google Chrome} or a recent \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}.
+Clique aqui para abrir o documento-exemplo no \wllogo{}}}
+\\[1ex]\scriptsize{}Ou vá para esta URL: \url{http://bit.ly/1cU9qBC}\\
+Para melhores resultados, por favor use \href{http://www.google.com/chrome}{Google Chrome} ou \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}.
 \end{center}
 \vskip 2ex
 \begin{itemize}
-\item Let's get started!
+\item Vamos começar!
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Title and Abstract}
+\subsection{Título e Resumo}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}{\small
-\item Tell \LaTeX{} the \cmdbs{title} and \cmdbs{author} names in the preamble.
-\item Then use \cmdbs{maketitle} in the document to actually create the title.
-\item Use the \bftt{abstract} environment to make an abstract.
+\item Informe ao \LaTeX{} no preâmbulo o título, usando o comando \cmdbs{title} e o autor, usando o comando \cmdbs{author}.
+\item Então  use \cmdbs{maketitle} no documento para realmente criar o título.
+\item Use o ambiente \bftt{abstract} para criar um resumo.
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
-  {structure-title.tex}
+  {structure-title.tex}∫
 \end{minipage}
 \begin{minipage}{0.35\linewidth}
 \includegraphics[width=\textwidth,clip,trim=2.2in 7in 2.2in 2in]{structure-title.pdf}
@@ -73,33 +71,32 @@ For best results, please use \href{http://www.google.com/chrome}{Google Chrome} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Sections}
+\subsection{Seções}
 \begin{frame}{\insertsubsection}
 \begin{itemize}{\small
-\item Just use \cmdbs{section} and \cmdbs{subsection}.
-\item Can you guess what \cmdbs{section*} and \cmdbs{subsection*} do?
+\item Apenas utilize os comandos  \cmdbs{section} e \cmdbs{subsection} para seções e subseções.
+\item Você pode adivinhar o que os comandos \cmdbs{section*} e \cmdbs{subsection*} fazem?
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
-\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+\inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
   {structure-sections.tex}
 \end{minipage}
-\begin{minipage}{0.35\linewidth}
-\includegraphics[width=\textwidth,clip,trim=1.5in 6in 4in 1in]{structure-sections.pdf}
+\begin{minipage}{0.35\linewidth} 
+\expandafter\includegraphics\expandafter[width=\textwidth,clip,trim=1.5in 6in 4in 1in]{structure-sections.pdf}
 \end{minipage}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Labels and Cross-References}
+\subsection{Rótulos e Referência Cruzada}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}{\small
-\item Use \cmdbs{label} and \cmdbs{ref} for automatic numbering.
-\item The \bftt{amsmath} package provides \cmdbs{eqref} for referencing
-equations.
+\item Use \cmdbs{label} para rotular e \cmdbs{ref} para referência cruzada automática. 
+\item O pacote \bftt{amsmath} disponibiliza o comando \cmdbs{eqref} para referenciar equações.
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
-\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+\inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
   {structure-crossref.tex}
 \end{minipage}
 \begin{minipage}{0.35\linewidth}
@@ -110,29 +107,27 @@ equations.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Exercise}
-\begin{frame}[fragile]{Structured Documents Exercise}
+\subsection{Exercício}
+\begin{frame}[fragile]{Exercícios de um documento estruturado}
 
-\begin{block}{Typeset this short paper in \LaTeX:
-\footnote{From \url{http://pdos.csail.mit.edu/scigen/}, a random
-paper generator.}}
+\begin{block}{Digite um  artigo curto em \LaTeX:
+\footnote{Traduzido a partir de  \url{http://pdos.csail.mit.edu/scigen/}, um gerador de artigos aleatórios.}}
 \begin{center}
 \fbox{\href{\fileuri/structure-exercise-solution.pdf}{%
-Click to open the paper}}
+Clique aqui para abrir o artigo}}
 \end{center}
-Make your paper look like this one. Use \cmdbs{ref} and \cmdbs{eqref} to avoid
-explicitly writing section and equation numbers into the text.
+Faça seu artigo parecer com este aqui. Use os comandos \cmdbs{ref} e \cmdbs{eqref} para evitar escrever explicitamente seção e número de equações no texto.
 \end{block}
 \vskip 2ex
 \begin{center}
 \fbox{\href{\wlnewdoc{structure-exercise.tex}}{%
-Click to open this exercise in \wllogo{}}}
+Clique aqui para abrir este exercício no \wllogo{}}}
 \end{center}
 
 \begin{itemize}
-\item Once you've tried,
+\item Uma vez que tenha tentado,
 \fbox{\href{\wlnewdoc{structure-exercise-solution.tex}}{%
-click here to see my solution}}.
+clique aqui para ver a solução}}.
 \end{itemize}
 \end{frame}
 

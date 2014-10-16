@@ -124,11 +124,11 @@ Tradução: Dr Luiz-Rafael Santos
 }
 \titlegraphic{%
 \includegraphics[page=4]{wllogo-series}\\[1em]
-\includegraphics[heigth=15pt]{UoB-logo}
-% \qquad
-% \includegraphics[heigth=1pt]{setsquared_supported.pdf}
-% \qquad
-% \includegraphics[width=.13\textwidth]{ufsc_color}
+\includegraphics[width=.3\textwidth]{UoB-logo}
+ \qquad
+ \includegraphics[width=.2\textwidth]{setsquared_supported}
+ \qquad
+ \includegraphics[width=.13\textwidth]{ufsc_color}
 }
 
 
@@ -157,5 +157,10 @@ Tradução: Dr Luiz-Rafael Santos
   \immediate\openout\minted@code\jobname.pyg
   \immediate\write\minted@code{\expandafter\detokenize\expandafter{#1}}%
   \immediate\closeout\minted@code}
+
 \makeatother
 
+
+ \makeatletter
+\define@key{PAX@Gin}{scale}{}
+\makeatother
