@@ -134,12 +134,12 @@ clique aqui para ver a solução}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Figures and Tables}
+\section{Figuras e Tabelas}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Outline}
+\begin{frame}{Resumo}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
 \end{multicols}
@@ -148,12 +148,12 @@ clique aqui para ver a solução}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Graphics}
+\subsection{Figuras}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}
-\item Requires the \bftt{graphicx} package, which provides the
-\cmdbs{includegraphics} command.
-\item Supported graphics formats include JPEG, PNG and PDF (usually). 
+\item O pacote \bftt{graphicx} é necessário, já que provê o comando
+\cmdbs{includegraphics}.
+\item Formatos de figuras que tem suporte incluem JPEG, PNG e PDF (em geral). 
 \end{itemize}
 \begin{exampletwouptiny}
 \includegraphics[
@@ -170,31 +170,32 @@ clique aqui para ver a solução}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Interlude: Optional Arguments}
+\begin{frame}[fragile]{Interlúdio: Argumentos de opções}
 \begin{itemize}
-\item We use square brackets \keystrokebftt{[} \keystrokebftt{]} for optional
-arguments, instead of braces \keystrokebftt{\{} \keystrokebftt{\}}.
-\item \cmdbs{includgraphics} accepts optional arguments that allow you to transform the
-image when it is included. For example, \bftt{width=0.3\cmdbs{textwidth}} makes
-the image take up 30\% of the width of the surrounding text (\cmdbs{textwidth}).
-\item \cmdbs{documentclass} accepts optional arguments, too. Example:
+\item Usamos colchetes  \keystrokebftt{[} \keystrokebftt{]} para inserir 
+argumentos de opções, ao invés de chaves\keystrokebftt{\{} \keystrokebftt{\}}.
+\item \cmdbs{includgraphics} aceita argumentos de  opçòes que permitem você transformar
+ a imagem que está sendo incluída. Por exemplo,  \bftt{width=0.3\cmdbs{textwidth}} faz 
+ com que a imagem tenha 30\% da largura do texto  (\cmdbs{textwidth}).
+\item \cmdbs{documentclass} também aceita argumenos de opções. Exemplo:
 \mint{latex}|\documentclass[12pt,twocolumn]{article}|
 \vskip 3ex
-makes the text bigger (12pt) and puts it into two columns.
-\item Where do you find out about these? See the slides at the end of this
-presentation for links to more information.
+faz com que o texto torne-se maior (12pt) e mostra o texto em duas colunas.
+\item Onde você encontra informações sobre isso? Veja os \emph{slides} no final 
+dessa apresentação com \emph{links} para mais informações.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection[fragile]{Floats}
+\subsection[fragile]{Objetos flutuantes}
 \begin{frame}{\insertsubsection}
 \begin{itemize}
-\item Allow \LaTeX{} to decide where the figure will go (it can ``float'').
-\item You can also give the figure a caption, which can be referenced with
-\cmdbs{ref}.
+\item Permita que o \LaTeX{} decida onde a figura deve aparecer no texto
+(ela pode  ``flutuar'').
+\item Você pode colocar uma legenda para a figura, a qual pode ser referenciada 
+ usando o comando \cmdbs{ref}.
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -208,12 +209,12 @@ presentation for links to more information.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Tables}
+\subsection{Tabelas}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}
-\item Tables in \LaTeX{} take some getting used to.
-\item Use the \bftt{tabular} environment from the \bftt{tabularx} package.
-\item The argument specifies column alignment --- \textbf{l}eft, \textbf{r}ight, \textbf{r}ight.
+\item Tabelas em \LaTeX{} precisam de atenção.
+\item Use o ambiente \bftt{tabular} do pacote \bftt{tabularx}.
+\item Os argumento que especificam o alinhamento das colunas: \textbf{l} para esquerda (\emph{left}), \textbf{c} para centralizar e \textbf{r} para direita (\emph{right}).
 \begin{exampletwouptiny}
 \begin{tabular}{lrr}
 Item   & Qty & Unit \$ \\
@@ -222,7 +223,8 @@ Gadget & 2   & 399.99  \\
 Cable  & 3   & 19.99   \\
 \end{tabular}
 \end{exampletwouptiny}
-\item It also specifies vertical lines; use \cmdbs{hline} for horizontal lines.
+\item É necessário especificar as linhas verticais. Para as linhas horizontais,  use o
+comando \cmdbs{hline}.
 \begin{exampletwouptiny}
 \begin{tabular}{|l|r|r|} \hline
 Item   & Qty & Unit \$ \\\hline
@@ -231,7 +233,9 @@ Gadget & 2   & 399.99  \\
 Cable  & 3   & 19.99   \\\hline
 \end{tabular}
 \end{exampletwouptiny}
-\item Use an ampersand \keystrokebftt{\&} to separate columns and a double backslash \keystrokebftt{\bs}\keystrokebftt{\bs} to start a new row (like in the \bftt{align*} environment that we saw in part 1).
+\item Use o ``E comercial''  \keystrokebftt{\&} para separar colunas e barras
+invertidas duplas \keystrokebftt{\bs}\keystrokebftt{\bs} para iniciar uma nova
+linha (como no ambiente  \bftt{align*} que vimos na parte 1).
 \end{itemize}
 \end{frame}
 
@@ -239,12 +243,12 @@ Cable  & 3   & 19.99   \\\hline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addtocontents{toc}{\newpage}
-\section{Bibliographies}
+\section{Referências bibliográficas}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Outline}
+\begin{frame}{Resumo}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
 \end{multicols}
@@ -256,9 +260,10 @@ Cable  & 3   & 19.99   \\\hline
 \subsection{bib\TeX}
 \begin{frame}[fragile]{\insertsubsection{} 1}
 \begin{itemize}
-\item Put your references in a \bftt{.bib} file in `bibtex' database format:
+\item Coloque suas referências em um arquivo  \bftt{.bib} no formato do  `bibtex' :
 \inputminted[fontsize=\scriptsize,frame=single]{latex}{bib-example.bib}
-\item Most reference managers can export to bibtex format.
+\item A maioria dos \emph{softwares} de administração de referências suporta o formato
+bibtex.
 \end{itemize}
 \end{frame}
 
@@ -267,17 +272,21 @@ Cable  & 3   & 19.99   \\\hline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{} 2}
 \begin{itemize}
-\item Each entry in the \bftt{.bib} file has a \emph{key} that you can use to
-reference it in the document. For example, \bftt{Jacobson1999Towards} is the key for this article:
+\item Cada entrada do arquivo the \bftt{.bib} tem uma \emph{chave} que você pode
+usar para referenciá-lo no documento. Por exemplo.  \bftt{Jacobson1999Towards} é
+a chave para citar o artigo:
 \begin{minted}[fontsize=\small,frame=single]{latex}
 @Article{Jacobson1999Towards,
   author = {Van Jacobson},
   ...
 }
 \end{minted}
-\item It's a good idea to use a key based on the name, year and title.
-\item \LaTeX{} can automatically format your in-text citations and generate a
-list of references; it knows most standard styles, and you can design your own.
+\item É uma boa ideia usar chaves baseadas no nome, ano e título do trabalho.
+\item \LaTeX{} pode formatar automaticamente suas citações e gerar uma lista de
+referências com os mais conhecidos padrões de estilos ou com o seu próprio.
+\item Para o português brasileiro, há um pacote chamado 
+\href{https://code.google.com/p/abntex2/}{\bftt{abntex2}} que
+formata as referências segundo o padrão ABNT. 
 \end{itemize}
 \end{frame}
 
@@ -286,41 +295,41 @@ list of references; it knows most standard styles, and you can design your own.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{} 3}
 \begin{itemize}
-\item Use the \bftt{natbib} package\footnote{There is a new package with more
-  features named \bftt{biblatex} but most of the articles templates still use
-  \bftt{natbib}.} with \cmdbs{citet} and \cmdbs{citep}.
-\item Reference \cmdbs{bibliography} at the end, and specify a \cmdbs{bibliographystyle}.
+\item Use o pacote \bftt{natbib} \footnote{Há um novo pacote com mais opções
+chamado \bftt{biblatex} porém a maioria dos modelos de artigos ainda utilizam o 
+  \bftt{natbib}.} com os comandos \cmdbs{citet} e \cmdbs{citep}.
+\item Insira o comando \cmdbs{bibliography} no final do artigo e especifique o
+estilo da referência com \cmdbs{bibliographystyle}.
 \end{itemize}
-\begin{minipage}{0.55\linewidth}
-\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+\begin{minipage}{0.5\linewidth}
+\inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
   {bib-example.tex}
 \end{minipage}
-\begin{minipage}{0.35\linewidth}
-\includegraphics[width=\textwidth,clip,trim=1.8in 5in 1.8in 1in]{bib-example.pdf}
+\begin{minipage}{0.4\linewidth}
+\includegraphics[width=\textwidth,clip,trim=1.8in 5in 1.5in 1in]{bib-example.pdf}
 \end{minipage}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Exercise}
-\begin{frame}[fragile]{Exercise: Putting it All Together}
+\subsection{Exercício}
+\begin{frame}[fragile]{Exercício: Juntando tudo}
 
-Add an image and a bibliography to the paper from the previous exercise.
+Adicione uma imagem e uma bibliografia ao artigo do exercício anterior.
 
 \begin{enumerate}
-\item Download these example files to your computer.
+\item Baixe os arquivos abaixo no seu computador.
 
 \begin{center}
-\fbox{\href{\fileuri/big_chick.png?dl=1}{Click to download example image}}
+\fbox{\href{\fileuri/big_chick.png?dl=1}{Clique para baixar a imagem}}
 
-\fbox{\href{\fileuri/bib-exercise.bib?dl=1}{Click to download example bib file}}
+\fbox{\href{\fileuri/bib-exercise.bib?dl=1}{Clique para baixar o arquivo .bib}}
 \end{center}
 
-\item Upload them to writeLaTeX (use the files menu).
+\item Adicione-os ao  writeLaTeX (use o menu de arquivos).
 
-\item (To find the keys in the \bftt{.bib} file, you'll have to open it in
-Notepad on your computer --- you can't view it online in writeLaTeX, yet.)
+\item (Para encontrar as chaves do arquivo \bftt{.bib}, você terá que abri-lo no seu computador --- \emph{ainda} não é possível vê-lo \emph{online} no  writeLaTeX.)
 
 \end{enumerate}
 \end{frame}
@@ -328,12 +337,12 @@ Notepad on your computer --- you can't view it online in writeLaTeX, yet.)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{What's Next?}
+\section{E agora?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Outline}
+\begin{frame}{Resumo}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
 \end{multicols}
@@ -342,18 +351,17 @@ Notepad on your computer --- you can't view it online in writeLaTeX, yet.)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{More Neat Things}
+\subsection{Mais coisas legais}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}
-\item Add the \cmdbs{tableofcontents} command to generate a table of contents
-from the \cmdbs{section} commands.
+\item Adicione o comando \cmdbs{tableofcontents} para gerar o sumário automaticamente a partir dos comandos de \cmdbs{section} commands.
 
-\item Change the \cmdbs{documentclass} to
+\item Mude a classe de documentos em \cmdbs{documentclass} para
 \mint{latex}!\documentclass{scrartcl}!
-or
+ou
 \mint{latex}!\documentclass[12pt]{IEEEtran}!
 
-\item Define your own command for a complicated equation:
+\item Defina o seu próprio comando de uma equação complicada:
 \begin{exampletwouptiny}
 \newcommand{\rperf}{%
   \rho_{\text{perf}}}
@@ -367,57 +375,55 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{More Neat Packages}
+\subsection{Mais pacotes legais}
 \begin{frame}{\insertsubsection}
 \begin{itemize}
-\item \bftt{beamer}: for presentations (like this one!)
-\item \bftt{todonotes}: comments and TODO management
-\item \bftt{tikz}: make amazing graphics
-\item \bftt{pgfplots}: create graphs in \LaTeX
-\item \bftt{listings}: source code printer for \LaTeX
-\item \bftt{spreadtab}: create spreadsheets in \LaTeX
-\item \bftt{gchords}, \bftt{guitar}: guitar chords and tabulature
-\item \bftt{cwpuzzle}: crossword puzzles
+\item \bftt{beamer}: para apresentações (como esta aqui!)
+\item \bftt{todonotes}: comentários e gerenciamento listas TODO
+\item \bftt{tikz}: faça figuras sensacionais
+\item \bftt{pgfplots}: crie  gráficos em \LaTeX
+\item \bftt{listings}: imprima seu código fonte em \LaTeX
+\item \bftt{spreadtab}: crie planilhas em  \LaTeX
+\item \bftt{gchords}, \bftt{guitar}: acordes para violão e tablaturas
+\item \bftt{cwpuzzle}: para palavras cruzdas
 \end{itemize}
-See \url{https://www.writelatex.com/examples} and \url{http://texample.net} for
-examples of (most of) these packages.
+Veja \url{https://www.writelatex.com/examples} e \url{http://texample.net} para
+exemplos da maioria desses pacotes\footnote{Em inglês.}.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Installing \LaTeX{}}
+\subsection{Instalando \LaTeX{}}
 \begin{frame}{\insertsubsection}
 \begin{itemize}
-\item To run \LaTeX{} on your own computer, you'll want to use a \LaTeX{}
-\emph{distribution}. A distribution includes a \bftt{latex} program
-and (typically) several thousand packages.
+\item Para rodar o  \LaTeX{} no seu próprio computador, você vai precisar de uma \emph{distribuição} do \LaTeX{}. Uma distribuição inclui  um programa \bftt{latex} e (tipicamente) alguns milhares de pacores.
 \begin{itemize}
-\item On Windows: \href{http://miktex.org/}{Mik\TeX} or \href{http://tug.org/texlive/}{\TeX Live}
-\item On Linux: \href{http://tug.org/texlive/}{\TeX Live}
-\item On Mac: \href{http://tug.org/mactex/}{Mac\TeX}
+\item No Windows: \href{http://miktex.org/}{Mik\TeX} ou \href{http://tug.org/texlive/}{\TeX Live}
+\item No Linux: \href{http://tug.org/texlive/}{\TeX Live}
+\item No Mac: \href{http://tug.org/mactex/}{Mac\TeX}
 \end{itemize} 
-\item You'll also want a text editor with \LaTeX{} support. See \url{http://en.wikipedia.org/wiki/Comparison_of_TeX_editors} for a list of (many) options.
-\item You'll also have to know more about how \bftt{latex} and its related tools
-work --- see the resources on the next slide.
+\item Você também vai qurer utiliar um editor para \LaTeX{}. Veja \url{http://en.wikipedia.org/wiki/Comparison_of_TeX_editors} para uma lista de opções.
+\item Você também vai precisar saber mais sobre como \bftt{latex} e suas ferramentas relacionadas funcionam --- veja fontes de recursos no próximo \emph{slide}.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Online Resources}
+\subsection{Recursos}
 \begin{frame}{\insertsubsection}
 \begin{itemize}
 \item \href{http://en.wikibooks.org/wiki/LaTeX}{The \LaTeX{} Wikibook} ---
-excellent tutorials and reference material.
-\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- ask
-questions and get excellent answers incredibly quickly
-\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- a large
-online forum 
+tutoriais excelentes e material de referência.
+\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- pergunte questões e tenha respostas excelentes e rápidas.
+\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- um imenso fórum \emph{online}
 \item \href{http://ctan.org/}{Comprehensive \TeX{} Archive Network (CTAN)} ---
-over four thousand packages plus documentation
-\item Google will usually get you to one of the above.
+mais de quatro mil pacotes e sua documentação
+
+
+\item \href{http://latexbr.blogspot.com.br/}{\LaTeX{} BR --- blog com dicas em português}
+\item Google em geral vai levâ-lo para um dos \emph{links} acima.
 \end{itemize}
 \end{frame}
 
@@ -426,7 +432,7 @@ over four thousand packages plus documentation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \begin{center}
-Thanks, and happy \TeX{}ing!
+Obrigado, e capriche nos seus próximos  \TeX{}tos!
 \end{center}
 \end{frame}
 
