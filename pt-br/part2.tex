@@ -286,8 +286,9 @@ list of references; it knows most standard styles, and you can design your own.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{} 3}
 \begin{itemize}
-\item Use the \bftt{natbib} package (recommended).
-\item Use \cmdbs{citet} and \cmdbs{citep} to insert citations by key.
+\item Use the \bftt{natbib} package\footnote{There is a new package with more
+  features named \bftt{biblatex} but most of the articles templates still use
+  \bftt{natbib}.} with \cmdbs{citet} and \cmdbs{citep}.
 \item Reference \cmdbs{bibliography} at the end, and specify a \cmdbs{bibliographystyle}.
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
@@ -373,6 +374,7 @@ $$
 \item \bftt{todonotes}: comments and TODO management
 \item \bftt{tikz}: make amazing graphics
 \item \bftt{pgfplots}: create graphs in \LaTeX
+\item \bftt{listings}: source code printer for \LaTeX
 \item \bftt{spreadtab}: create spreadsheets in \LaTeX
 \item \bftt{gchords}, \bftt{guitar}: guitar chords and tabulature
 \item \bftt{cwpuzzle}: crossword puzzles
@@ -391,7 +393,7 @@ examples of (most of) these packages.
 \emph{distribution}. A distribution includes a \bftt{latex} program
 and (typically) several thousand packages.
 \begin{itemize}
-\item On Windows: \href{http://miktex.org/}{Mik\TeX}
+\item On Windows: \href{http://miktex.org/}{Mik\TeX} or \href{http://tug.org/texlive/}{\TeX Live}
 \item On Linux: \href{http://tug.org/texlive/}{\TeX Live}
 \item On Mac: \href{http://tug.org/mactex/}{Mac\TeX}
 \end{itemize} 
