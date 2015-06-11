@@ -4,7 +4,7 @@ latex-course
 Slides for an introductory course on LaTeX. The slides and their LaTeX source
 code are provided in [this github repository](https://github.com/jdleesmiller/latex-course) under a permissive MIT license.
 
-The aim is to get students writing in LaTeX as quickly as possible. The material is presented as a set of examples, and broader concepts and techniques are explained as they arise. Each part includes exercises that can be completed on [writeLaTeX](https://www.writelatex.com), the free online LaTeX editor, so you don't have to worry about getting LaTeX and related tools installed on everyone's computers.
+The aim is to get students writing in LaTeX as quickly as possible. The material is presented as a set of examples, and broader concepts and techniques are explained as they arise. Each part includes exercises that can be completed on [Overleaf](https://www.overleaf.com), the free online LaTeX editor, so you don't have to worry about getting LaTeX and related tools installed on everyone's computers.
 
 These slides were originally used to deliver two two-hour workshops, but there is probably enough material for three workshops, so there are three parts:
 
@@ -33,9 +33,9 @@ The relevant package is python-pygments in Debian / Ubuntu
 (`sudo apt-get install python-pygments`).
 
 1. There is a simple `Makefile` that manages the build. To use it, you'll
-probably need to be on Linux, and you will need `make`. 
+probably need to be on Linux, and you will need `make`.
 
-The slides include links to exercises that open in writeLaTeX. The exercise
+The slides include links to exercises that open in Overleaf. The exercise
 source files are hosted on github. If you want to use exercise files in another
 location, you can [fork](https://help.github.com/articles/fork-a-repo) this
 github repository and then change the `\fileuri` macro in `preamble.tex`:
@@ -44,7 +44,7 @@ github repository and then change the `\fileuri` macro in `preamble.tex`:
 ```
 so that instead of pointing to `jdleesmiller/latex-course`, it points to
 `your-github-user-name/latex-course`. Then, once you've pushed your changed
-exercise files to github, the slides will load them up in writeLaTeX.
+exercise files to github, the slides will load them up in Overleaf.
 
 The `deploy-to-gh-pages.sh` script builds the slides using the Makefile and
 copies the slides over to the `gh-pages` branch, which is available at

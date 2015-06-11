@@ -16,6 +16,7 @@
 en/part1.pdf
 en/part2.pdf
 en/part3.pdf
+<<<<<<< HEAD
 pt-br/part1.pdf
 pt-br/part2.pdf
 pt-br/part3.pdf
@@ -93,3 +94,10 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+=======
+en/bib-example.pdf
+en/media-graphics.pdf
+en/structure-crossref.pdf
+en/structure-sections.pdf
+en/structure-title.pdf
+>>>>>>> upstream/master
