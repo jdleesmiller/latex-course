@@ -45,13 +45,13 @@
 \newcommand{\cmdbegin}[1]{\cmdbs{begin\lcb}\bftt{#1}\cmd{\rcb}}
 \newcommand{\cmdend}[1]{\cmdbs{end\lcb}\bftt{#1}\cmd{\rcb}}
 
-\newcommand{\wllogo}{\textbf{write\textrm{\LaTeX}}}
+\newcommand{\wllogo}{\textbf{Overleaf}}
 
 % this is where the example source files are loaded from
 % do not include a trailing slash
 \newcommand{\fileuri}{https://raw.github.com/lrsantos11/latex-course/master/pt-br}
 
-\newcommand{\wlserver}{https://www.writelatex.com}
+\newcommand{\wlserver}{https://www.overleaf.com}
 \newcommand{\wlnewdoc}[1]{\wlserver/docs?snip\_uri=\fileuri/#1\&splash=none}
 
 \def\tikzname{Ti\emph{k}Z}
@@ -123,7 +123,7 @@
 Tradução: Dr Luiz-Rafael Santos
 }
 \titlegraphic{%
-\includegraphics[page=4]{wllogo-series}\\[1em]
+% \includegraphics[page=4]{wllogo-series}\\[1em]
 \includegraphics[width=.3\textwidth]{UoB-logo}
  \qquad
  \includegraphics[width=.2\textwidth]{setsquared_supported}
@@ -150,8 +150,9 @@ Tradução: Dr Luiz-Rafael Santos
 %% DG/SR modification begin - May. 18, 1998 (to avoid problems with ligatures)
     \let\@noligs\relax
 %% DG/SR modification end
-    \FV@Scan}
-    \let\FVB@VerbatimOut\minted@FVB@VerbatimOut
+    % \FV@Scan
+    }
+    % \let\FVB@VerbatimOut\minted@FVB@VerbatimOut
 
 \renewcommand\minted@savecode[1]{
   \immediate\openout\minted@code\jobname.pyg
