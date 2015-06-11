@@ -93,9 +93,15 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
-=======
+
 en/bib-example.pdf
 en/media-graphics.pdf
 en/structure-crossref.pdf
 en/structure-sections.pdf
 en/structure-title.pdf
+
+pt-br/bib-example.pdf
+pt-br/media-graphics.pdf
+pt-br/structure-crossref.pdf
+pt-br/structure-sections.pdf
+pt-br/structure-title.pdf

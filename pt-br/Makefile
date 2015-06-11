@@ -11,7 +11,6 @@ part1.pdf: part1.tex preamble.tex
 #
 part2.pdf: part2.tex preamble.tex structure-title.pdf structure-sections.pdf structure-crossref.pdf media-graphics.pdf bib-example.pdf structure-exercise-solution.pdf
 	latexmk -pdf -xelatex  -interaction=nonstopmode -shell-escape -synctex=1 -8bit part2
-	latexmk -pdf -xelatex  -interaction=nonstopmode -shell-escape -synctex=1 -8bit part2
 
 structure-title.pdf: structure-title.tex
 	latexmk -pdf -xelatex  -interaction=nonstopmode -shell-escape -synctex=1 -8bit structure-title
