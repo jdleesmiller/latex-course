@@ -5,8 +5,9 @@
 \ifxetex
   \usepackage{polyglossia}
     \setdefaultlanguage{brazil}
+    \usefonttheme{professionalfonts}
   \usepackage{fontspec}
-  \usepackage{unicode-math}
+   \usepackage{unicode-math}
 \else
   \usepackage[brazil]{babel}
   \usepackage[utf8]{inputenc}
@@ -129,34 +130,6 @@ Tradução: Dr Luiz-Rafael Santos
 }
 
 
-% \makeatletter
-% \newcommand{\minted@write@detok}[1]{%
-%   \immediate\write\FV@OutFile{\detokenize{#1}}}%
-
-% \newcommand{\minted@FVB@VerbatimOut}[1]{%
-%   \@bsphack
-%   \begingroup
-%     \FV@UseKeyValues
-%     \FV@DefineWhiteSpace
-%     \def\FV@Space{\space}%
-%     \FV@DefineTabOut
-%     %\def\FV@ProcessLine{\immediate\write\FV@OutFile}% %Old, non-Unicode version
-%     \let\FV@ProcessLine\minted@write@detok %Patch for Unicode
-%     \immediate\openout\FV@OutFile #1\relax
-%     \let\FV@FontScanPrep\relax
-% %% DG/SR modification begin - May. 18, 1998 (to avoid problems with ligatures)
-%     \let\@noligs\relax
-% %% DG/SR modification end
-%     % \FV@Scan
-%     }
-%     % \let\FVB@VerbatimOut\minted@FVB@VerbatimOut
-
-% \renewcommand\minted@savecode[1]{
-%   \immediate\openout\minted@code\jobname.pyg
-%   \immediate\write\minted@code{\expandafter\detokenize\expandafter{#1}}%
-%   \immediate\closeout\minted@code}
-
-% \makeatother
 
 
  \makeatletter
