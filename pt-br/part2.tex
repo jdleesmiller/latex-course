@@ -32,8 +32,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\insertsection}
 \begin{itemize}
-\item Na Parte 1, aprendemos sobre comandos e ambientes para digitar textos e textos matemáticos.
-\item Agora, aprenderemos sobre comandos e ambientes para documentos estruturados.
+\item Na Parte 1, aprendemos como utilizar comandos e ambientes para digitar textos, matemáticos ou não.
+\item Agora, aprenderemos a utilizar comandos e ambientes para estruturar documentos.
 \item Você pode tentar os novos comandos no Overleaf:
 \end{itemize}
 \vskip 2em
@@ -74,15 +74,15 @@ Para melhores resultados, por favor use \href{http://www.google.com/chrome}{Goog
 \subsection{Seções}
 \begin{frame}{\insertsubsection}
 \begin{itemize}{\small
-\item Apenas utilize os comandos  \cmdbs{section} e \cmdbs{subsection} para seções e subseções.
+\item Utilize os comandos  \cmdbs{section} e \cmdbs{subsection} para criar seções e subseções.
 \item Você pode adivinhar o que os comandos \cmdbs{section*} e \cmdbs{subsection*} fazem?
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
   {structure-sections.tex}
 \end{minipage}
-\begin{minipage}{0.35\linewidth} 
-\expandafter\includegraphics\expandafter[width=\textwidth,clip,trim=1.5in 6in 4in 1in]{structure-sections.pdf}
+\begin{minipage}{0.40\linewidth} 
+\expandafter\includegraphics\expandafter[width=\textwidth,clip,trim=1.5in 6in 3.5in 1in]{structure-sections.pdf}
 \end{minipage}
 \end{frame}
 
@@ -100,7 +100,7 @@ Para melhores resultados, por favor use \href{http://www.google.com/chrome}{Goog
   {structure-crossref.tex}
 \end{minipage}
 \begin{minipage}{0.35\linewidth}
-\includegraphics[width=\textwidth,clip,trim=1.8in 6in 1.6in 1in]{structure-crossref.pdf}
+\includegraphics[width=\textwidth,clip,trim=1.8in 6in 1.8in 1in]{structure-crossref.pdf}
 \end{minipage}
 \end{frame}
 
@@ -194,8 +194,7 @@ dessa apresentação com \emph{links} para mais informações.
 \begin{itemize}
 \item Permita que o \LaTeX{} decida onde a figura deve aparecer no texto
 (ela pode  ``flutuar'').
-\item Você pode colocar uma legenda para a figura, a qual pode ser referenciada 
- usando o comando \cmdbs{ref}.
+\item Você pode colocar uma legenda para a figura usando \cmdbs{caption}, a qual pode ser referenciada  usando \cmdbs{ref}.
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -353,12 +352,12 @@ Adicione uma imagem e uma bibliografia ao artigo do exercício anterior.
 \subsection{Mais coisas legais}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}
-\item Adicione o comando \cmdbs{tableofcontents} para gerar o sumário automaticamente a partir dos comandos de \cmdbs{section} commands.
+\item Adicione o comando \cmdbs{tableofcontents} para gerar o sumário automaticamente a partir dos comandos  \cmdbs{section}.
 
 \item Mude a classe de documentos em \cmdbs{documentclass} para
-\mint{latex}!\documentclass{scrartcl}!
+\mint{latex}!\documentclass{scrartcl} %Koma-Script!
 ou
-\mint{latex}!\documentclass[12pt]{IEEEtran}!
+\mint{latex}!\documentclass[12pt]{IEEEtran} %IEEE Transactions!
 
 \item Defina o seu próprio comando de uma equação complicada:
 \begin{exampletwouptiny}
@@ -386,7 +385,7 @@ $$
 \item \bftt{gchords}, \bftt{guitar}: acordes para violão e tablaturas
 \item \bftt{cwpuzzle}: para palavras cruzadas
 \end{itemize}
-Veja \url{https://www.overleaf.com/latex/examples} e \url{http://texample.net} para
+Veja \url{https://www.overleaf.com/latex/examples} ou \url{http://texample.net} para
 exemplos da maioria desses pacotes\footnote{Em inglês.}.
 \end{frame}
 
@@ -402,7 +401,7 @@ exemplos da maioria desses pacotes\footnote{Em inglês.}.
 \item No Linux: \href{http://tug.org/texlive/}{\TeX Live}
 \item No Mac: \href{http://tug.org/mactex/}{Mac\TeX}
 \end{itemize} 
-\item Você também vai qurer utiliar um editor para \LaTeX{}. Veja \url{http://en.wikipedia.org/wiki/Comparison_of_TeX_editors} para uma lista de opções.
+\item Você também vai querer utilizar um editor para \LaTeX{}. Veja \url{en.wikipedia.org/wiki/Comparison_of_TeX_editors} para uma lista de opções.
 \item Você também vai precisar saber mais sobre como \bftt{latex} e suas ferramentas relacionadas funcionam --- veja fontes de recursos no próximo \emph{slide}.
 \end{itemize}
 \end{frame}
