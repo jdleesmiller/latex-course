@@ -184,7 +184,7 @@ ou mais linhas em branco.
 \end{exampletwouptiny}
 \item Espaços a mais no código-fonte serão eliminados no arquivo-saída.
 \begin{exampletwouptiny}
-A    chuva   na       amazônia
+A    chuva   na       Amazônia
 cai    na Horizontal.
 \end{exampletwouptiny}
 \end{itemize}
@@ -207,16 +207,17 @@ Aspas duplas: ``texto''.
 \end{exampletwouptiny}
 
 \item Alguns caracteres comuns tem significado especial no  \LaTeX:\\[1ex]
-\begin{tabular}{cl}
+\begin{tabular}{ll}
 \keystrokebftt{\%} & porcentagem              \\
 \keystrokebftt{\#} & \emph{hashtag} (jogo da velha) \\
 \keystrokebftt{\&} & ``E'' comercial                 \\
 \keystrokebftt{\$} & cifrão               \\
+\keystrokebftt{\{} e \keystrokebftt{\}}  & abre e fecha chaves               \\
 \end{tabular}
 \item Se você apenas digitá-los, você terá um erro. Se você quiser que algum
-deles apareça, tera que utilizar uma barra invertida antes do símbolo.
+deles apareça, terá que utilizar uma barra invertida antes do símbolo.
 \begin{exampletwoup}
-\$\%\&\#!
+\$\%\&\#\{\} 
 \end{exampletwoup}
 \end{itemize}
 \end{frame}
@@ -499,7 +500,7 @@ Sejam $X_1, X_2, \ldots, X_n$ uma sequência de variáveis aleatórias
 independentes e distribuídas de forma igual com $\operatorname{E}[X_i] = \mu$
 e $\operatorname{Var}[X_i] = \sigma^2 < \infty$, e denote
 \begin{equation*}
-S_n = \frac{1}{n}\sum_{i}^{n} X_i
+S_n = \frac{1}{n}\sum_{i=1}^{n} X_i
 \end{equation*}
 suas médias. Então quando $n$ tende ao infinito, as variáveis aleatórias  
 $\sqrt{n}(S_n - \mu)$ convergem em distribuição à uma normal $N(0, \sigma^2)$.

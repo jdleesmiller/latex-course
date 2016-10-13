@@ -41,40 +41,38 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\LaTeX{} Recap}
+\section{Revisão de \LaTeX{}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection}
 \begin{itemize}
-\item You write your document in \texttt{plain text} with \cmd{commands} that
-describe its structure and meaning.
-\item The \texttt{latex} program processes your text and commands to produce a
-beautifully formatted document.
+\item Você  escreve seu documento em  \texttt{text simples} com \cmd{comandos} que descrevem sua estrutura e significado.
+\item O programa \texttt{latex} processa seu texto e seus comandos para produzir um texto formosamente formatado.
 \end{itemize}
 \vskip 2ex
 \begin{center}
 \begin{minted}[frame=single]{latex}
-The rain in Spain falls \emph{mainly} on the plain.
+A chuva na Amazônia \emph{cai} na horizontal.
 \end{minted}
 \vskip 2ex
 \tikz\node[single arrow,fill=gray,font=\ttfamily\bfseries,%
   rotate=270,xshift=-1em]{latex};
 \vskip 2ex
-\fbox{The rain in Spain falls \emph{mainly} on the plain.}
+\fbox{A chuva na Amazônia \emph{cai} na horizontal.}
 \end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Commands \& Arguments}
+\begin{frame}[fragile]{\insertsection: Comandos \& Argumentos}
 \begin{itemize}
-\item A command starts with a \emph{backslash} \keystrokebftt{\bs}.
-\item Some commands take an \emph{argument} in curly braces \keystrokebftt{\{}
+\item Um comando começa com uma \emph{backslash} \keystrokebftt{\bs}.
+\item Alguns comandos podem receber um \emph{argumento} entre chaves \keystrokebftt{\{}
 \keystrokebftt{\}}.
-\item Some commands also take \emph{optional arguments} in square brackets \keystrokebftt{[} \keystrokebftt{]}.
+\item Alguns comenados também recebem  \emph{argumentos opcionais} enter colchetes \keystrokebftt{[} \keystrokebftt{]}.
 \vskip 2ex
 \begin{exampletwouptiny}
 \includegraphics[
@@ -90,22 +88,21 @@ The rain in Spain falls \emph{mainly} on the plain.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Environments}
+\begin{frame}[fragile]{\insertsection: Ambientes}
 \begin{itemize}
-\item The \cmdbs{begin} and \cmdbs{end} commands are used to create many
-different environments --- contexts.
+\item Os comandos \cmdbs{begin} e \cmdbs{end} são usados para criar diferentes tipos de ambientes  --- ou seja contextos.
 
-\item The \bftt{itemize} and \bftt{enumerate} environments make lists.
+\item Os ambientes \bftt{itemize} e \bftt{enumerate} fazem listas.
 \vskip 2ex
 \begin{exampletwouptiny}
 \begin{itemize} % for bullet points
-\item Biscuits
-\item Tea
+\item Café
+\item Chá
 \end{itemize}
 
 \begin{enumerate} % for numbers
-\item Biscuits
-\item Tea
+\item Café
+\item Chá
 \end{enumerate}
 \end{exampletwouptiny}
 
@@ -115,9 +112,9 @@ different environments --- contexts.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Mathematics}
+\begin{frame}[fragile]{\insertsection: Textos Matemáticos}
 \begin{itemize}
-\item The \bftt{equation} environment makes a numbered equation.
+\item O ambiente \bftt{equation} produz equações numeradas.
 \begin{exampletwouptiny}
 \begin{equation}
   \sum_{k=1}^{n} \frac{1}{2^k}
@@ -125,36 +122,37 @@ different environments --- contexts.
 \end{exampletwouptiny}
 \vskip 2ex
 
-\item Use dollar signs \keystrokebftt{\$} to mark mathematics in text.\\[1ex]
+\item Use cifrão  \keystrokebftt{\$} para escrever matemática em um texto corrido.\\[1ex]
 \begin{exampletwouptiny}
-% not so good:
-Let a and b be distinct positive
-integers, and let c = a - b + 1.
+% não tão bom:
+Seja a e b inteiros positivos 
+distintos, e seja  
+c = a - b + 1.
 
-% much better:
-Let $a$ and $b$ be distinct positive
-integers, and let $c = a - b + 1$.
+% muito melhor:
+Seja $a$ e $b$ inteiros positivos 
+distintos, e seja
+$c = a - b + 1$.
 \end{exampletwouptiny}
 \vskip 2ex
-\item Always use dollar signs in pairs --- one to begin the mathematics, and one
-to end it.
+\item Sempre utilize cifrão em pares --- um para o começo do texto matemático e
+outro para o final.
 \vskip 1em
-{\scriptsize In fact, we could have written \bftt{\$...\$} as
-\cmdbegin{math}\bftt{...}\cmdend{math}.}
+{\scriptsize De fato, poderíamos ter escrito \bftt{\$\ldots\$} como
+\cmdbegin{math}\bftt{\ldots}\cmdend{math}.}
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Document Structure}
+\begin{frame}[fragile]{\insertsection: Estrutura de Documentos}
 \begin{itemize}{\small
-\item Starts with the \cmdbs{documentclass} --- what type of document.
-\item Metadata (\cmdbs{title} and \cmdbs{author}) and packages in the
-preamble.
-\item Content between \cmdbegin{document} and \cmdend{document}.
-\item The \cmdbs{maketitle} command creates the title; \cmdbs{section} commands
-create numbered sections.
+\item Começa com o comando \cmdbs{documentclass} --- determina o tipo de documento.
+\item Metadados (\cmdbs{title} e \cmdbs{author}) e pacotes ficam no 
+preâmbulo.
+\item O texto propriamente dito fica entre \cmdbegin{document} e \cmdend{document}.
+\item O comando \cmdbs{maketitle} cria o título; comandos \cmdbs{section} criam seções numeradas.
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -169,27 +167,27 @@ create numbered sections.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Exercise}
+\begin{frame}[fragile]{\insertsection: Exercícios}
 
 \begin{enumerate}
-\item Here is the text for a short article:\footnote{Based on \url{http://www.cgd.ucar.edu/cms/agu/scientific_talk.html}}
+\item Aqui você encontra um texto para um pequeno artigo:\footnote{Based on \url{http://www.cgd.ucar.edu/cms/agu/scientific_talk.html}}
 \begin{center}
 \fbox{\href{\wlnewdoc{recap-exercise.tex}}{%
-Click to open this exercise in \wllogo{}}}
+Clique aqui para abrir o exercícios no  \wllogo{}}}
 \end{center}
 \vskip 2ex
-\item Add \LaTeX{} commands to the text to make it look like this one:
+\item Adicione comandos \LaTeX{} ao texto para ficar parecido com este arquivo:
 \begin{center}
 \fbox{\href{\fileuri/recap-exercise-solution.pdf}{%
-Click to open the model document}}
+Abra para abrir o modelo do documento}}
 \end{center}
 \end{enumerate}
 
-\begin{block}{Hints}
+\begin{block}{Dicas}
 \begin{itemize}
-\item Use the \bftt{enumerate} and \bftt{itemize} environments for lists.
-\item To typeset a \keystrokebftt{\%} percent sign, \emph{escape} it with a backslash (\cmdbs{\%}).
-\item To typeset the equation, use \cmdbs{frac} for the fraction and the \cmdbs{left(} and \cmdbs{right)} commands for the parentheses.
+\item Use os comandos \bftt{enumerate} e \bftt{itemize} para listas.
+\item Para digitar o símbolo \keystrokebftt{\%} de porcentagem, \emph{adicione} a barra invertida (\cmdbs{\%}).
+\item Para digitar a equação, use o comando \cmdbs{frac} para fração e  os comandos \cmdbs{left(} and \cmdbs{right)} para os parênteses ficarem com tamanho adequado.
 \end{itemize}
 \end{block}
 \end{frame}
@@ -197,20 +195,20 @@ Click to open the model document}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Presentations with \protect\bftt{beamer}}
+\section{Apresentações com \protect\bftt{beamer}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection}
 \begin{itemize}
-\item Beamer is a package for creating presentations (such as this one!) in
+\item Beamer é um pacote para criar apresentações  (tais como esta!) em
 \LaTeX{}.
-\item It provides the \bftt{beamer} document class.
-\item Use the \bftt{frame} environment to create slides.
+\item Faz uso da classe de documentos \bftt{beamer}.
+\item Usa o ambiente \bftt{frame} para criar slides.
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
-\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+\inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
   {beamer-minimal.tex}
 \end{minipage}
 \begin{minipage}{0.35\linewidth}
@@ -222,16 +220,15 @@ Click to open the model document}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Following Along}
+\begin{frame}[fragile]{\insertsection: Continuando}
 
 \begin{itemize}
-\item As we go through the following slides, try out the examples by typing them
-into the example document on \wllogo.
+\item A partir de agora, ao passarmos aos próximos slides, tente os exemplos digitando-os no modelo que se encontra no \wllogo.
 \end{itemize}
 \vskip 2ex
 \begin{center}
 \fbox{\href{\wlnewdoc{beamer-minimal.tex}}{%
-Click to open the example document in \wllogo{}}}
+Clique aqui para abrir o modelo no \wllogo{}}}
 \end{center}
 \end{frame}
 
@@ -239,11 +236,11 @@ Click to open the example document in \wllogo{}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\frametitle{\insertsection: Frames}
+\frametitle{\insertsection: \emph{Slides}}
 \begin{itemize}
-\item Use \cmdbs{frametitle} to give the frame a title.
-\item Then add content to the frame.
-\item The source for this frame looks like:
+\item Use o comando \cmdbs{frametitle} para colocar título nos slide.
+\item Adicione então conteúdo ao slides.
+\item A fonte para esse slide parece-se com isso:
 \vskip 2ex
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
   {beamer-frame.tex}
@@ -253,11 +250,11 @@ Click to open the example document in \wllogo{}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Sections}
+\begin{frame}[fragile]{\insertsection: Seções}
 \begin{itemize}
-\item You can use \cmdbs{section}s to group your \bftt{frame}s, and
-\bftt{beamer} will use them to create an automatic outline.
-\item To generate an outline, use the \cmdbs{tableofcontents} command. Here's
+\item  Use o comando \cmdbs{section} para agrupar seus \bftt{slides}s, e o
+\bftt{beamer} irá usá-los para criar um sumário automaticamente.
+\item Para gerar o sumário, use o comando \cmdbs{tableofcontents}.  Here's
 one for this presentation. The \bftt{currentsection} option highlights the current section.
 \vskip 2ex
 \begin{exampletwouptiny}
