@@ -170,16 +170,16 @@ clique aqui para ver a solução}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Interlúdio: Argumentos de opções}
+\begin{frame}[fragile]{Interlúdio: Argumentos opcionais}
 \begin{itemize}
 \item Usamos colchetes  \keystrokebftt{[} \keystrokebftt{]} para inserir 
-argumentos de opções, ao invés de chaves\keystrokebftt{\{} \keystrokebftt{\}}.
-\item \cmdbs{includgraphics} aceita argumentos de  opçòes que permitem você transformar
+argumentos opcionais, ao invés de chaves\keystrokebftt{\{} \keystrokebftt{\}}.
+\item \cmdbs{includgraphics} aceita argumentos opcionais que permitem você transformar
  a imagem que está sendo incluída. Por exemplo,  \bftt{width=0.3\cmdbs{textwidth}} faz 
  com que a imagem tenha 30\% da largura do texto  (\cmdbs{textwidth}).
-\item \cmdbs{documentclass} também aceita argumenos de opções. Exemplo:
+\item \cmdbs{documentclass} também aceita argumenos opcionais. Exemplo:
 \mint{latex}|\documentclass[12pt,twocolumn]{article}|
-\vskip 3ex
+% \vskip 3ex
 faz com que o texto torne-se maior (12pt) e mostra o texto em duas colunas.
 \item Onde você encontra informações sobre isso? Veja os \emph{slides} no final 
 dessa apresentação com \emph{links} para mais informações.
@@ -194,7 +194,7 @@ dessa apresentação com \emph{links} para mais informações.
 \begin{itemize}
 \item Permita que o \LaTeX{} decida onde a figura deve aparecer no texto
 (ela pode  ``flutuar'').
-\item Você pode colocar uma legenda para a figura usando \cmdbs{caption}, a qual pode ser referenciada  usando \cmdbs{ref}.
+\item Você pode colocar  legenda para uma figura usando \cmdbs{caption}, a qual pode ser referenciada  usando \cmdbs{ref}.
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -215,21 +215,21 @@ dessa apresentação com \emph{links} para mais informações.
 \item Use o ambiente \bftt{tabular} do pacote \bftt{tabularx}.
 \item Os argumento que especificam o alinhamento das colunas: \textbf{l} para esquerda (\emph{left}), \textbf{c} para centralizar e \textbf{r} para direita (\emph{right}).
 \begin{exampletwouptiny}
-\begin{tabular}{lrr}
-Item   & Qty & Unit \$ \\
-Widget & 1   & 199.99  \\
-Gadget & 2   & 399.99  \\
-Cable  & 3   & 19.99   \\
+\begin{tabular}{lcr}
+Item    & Qtd. & Unid. \$ \\
+Celular & 1    & 399,99  \\
+Capa    & 2    & 99,99  \\
+Cabo    & 3    & 19,99   \\
 \end{tabular}
 \end{exampletwouptiny}
 \item É necessário especificar as linhas verticais. Para as linhas horizontais,  use o
 comando \cmdbs{hline}.
 \begin{exampletwouptiny}
-\begin{tabular}{|l|r|r|} \hline
-Item   & Qty & Unit \$ \\\hline
-Widget & 1   & 199.99  \\
-Gadget & 2   & 399.99  \\
-Cable  & 3   & 19.99   \\\hline
+\begin{tabular}{|l|c|r|} \hline
+Item    & Qtd. & Unid. \$ \\\hline
+Celular & 1    & 399,99  \\
+Capa    & 2    & 99,99  \\
+Cabo    & 3    & 19,99   \\\hline
 \end{tabular}
 \end{exampletwouptiny}
 \item Use o ``E comercial''  \keystrokebftt{\&} para separar colunas e barras
@@ -395,13 +395,13 @@ exemplos da maioria desses pacotes\footnote{Em inglês.}.
 \subsection{Instalando \LaTeX{}}
 \begin{frame}{\insertsubsection}
 \begin{itemize}
-\item Para rodar o  \LaTeX{} no seu próprio computador, você vai precisar de uma \emph{distribuição} do \LaTeX{}. Uma distribuição inclui  um programa \bftt{latex} e (tipicamente) alguns milhares de pacores.
+\item Para rodar o  \LaTeX{} no seu próprio computador, você vai precisar de uma \emph{distribuição} do \LaTeX{}. Uma distribuição inclui  um programa \bftt{latex} e (tipicamente) alguns milhares de pacotes.
 \begin{itemize}
 \item No Windows: \href{http://miktex.org/}{Mik\TeX} ou \href{http://tug.org/texlive/}{\TeX Live}
 \item No Linux: \href{http://tug.org/texlive/}{\TeX Live}
 \item No Mac: \href{http://tug.org/mactex/}{Mac\TeX}
 \end{itemize} 
-\item Você também vai querer utilizar um editor para \LaTeX{}. Veja \url{en.wikipedia.org/wiki/Comparison_of_TeX_editors} para uma lista de opções.
+\item Você também vai querer utilizar um editor para \LaTeX{}. Veja \url{en.wikipedia.org/wiki/Comparison_of_TeX_editors} para uma lista em inglês de opções.
 \item Você também vai precisar saber mais sobre como \bftt{latex} e suas ferramentas relacionadas funcionam --- veja fontes de recursos no próximo \emph{slide}.
 \end{itemize}
 \end{frame}
