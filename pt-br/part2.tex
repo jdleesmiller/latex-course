@@ -253,14 +253,14 @@ linha (como no ambiente  \bftt{align*} que vimos na parte 1).
 \tableofcontents[currentsection]
 \end{multicols}
 \end{frame}
-
+ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{bib\TeX}
+\subsection{bibla\TeX}
 \begin{frame}[fragile]{\insertsubsection{} 1}
 \begin{itemize}
-\item Coloque suas referências em um arquivo  \bftt{.bib} no formato do  `bibtex' :
+\item Coloque suas referências em um arquivo  \bftt{.bib}:
 \inputminted[fontsize=\scriptsize,frame=single]{latex}{bib-example.bib}
 \item A maioria dos \emph{softwares} de administração de referências suporta o formato
 bibtex.
@@ -273,19 +273,19 @@ bibtex.
 \begin{frame}[fragile]{\insertsubsection{} 2}
 \begin{itemize}
 \item Cada entrada do arquivo the \bftt{.bib} tem uma \emph{chave} que você pode
-usar para referenciá-lo no documento. Por exemplo.  \bftt{Jacobson1999Towards} é
+usar para referenciá-lo no documento. Por exemplo.  \bftt{Valente1999} é
 a chave para citar o artigo:
 \begin{minted}[fontsize=\small,frame=single]{latex}
-@Article{Jacobson1999Towards,
-  author = {Van Jacobson},
+@Article{Valente1999,
+  author = {Wagner Rodrigues Valente},
   ...
 }
-\end{minted}
-\item É uma boa ideia usar chaves baseadas no nome, ano e título do trabalho.
+\end{minted} 
+\item É uma boa ideia usar chaves baseadas no autor, ano ou título do trabalho.
 \item \LaTeX{} pode formatar automaticamente suas citações e gerar uma lista de
 referências com os mais conhecidos padrões de estilos ou com o seu próprio.
 \item Para o português brasileiro, há um pacote chamado 
-\href{https://code.google.com/p/abntex2/}{\bftt{abntex2}} que
+\href{http://www.abntex.net.br/}{\bftt{abntex2}} que
 formata as referências segundo o padrão ABNT. 
 \end{itemize}
 \end{frame}
