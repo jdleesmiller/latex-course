@@ -2,20 +2,20 @@
 \usepackage[brazil]{babel}
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc} 
-\usepackage{natbib}
+\usepackage[style = numeric,  
+sortcites,language = brazil]{biblatex}
+% troque 'numeric' por outro como 'authoryear' 
+% Estilo 'abnt' necessita de TeXLive 2016
+\addbibresource{bib-example.bib} 
+
 \begin{document}
 
-\citet{Brooks1997Methodology}
+\textcite{Boyce2010}
 mostram que  \ldots. Claramente,
 todos os números ímpares são primos
-\citep{Jacobson1999Towards}.
+\cite{Valente1999,Boyce2010}.
 
-\bibliography{bib-example} 
-% se `bib-example.bib' for o nome do seu 
-% arquivo bib 
-
-\bibliographystyle{plainnat}
-% tente mudar para abbrvnat
+%para imprimir a bibliografia
+\printbibliography
 
 \end{document}
-

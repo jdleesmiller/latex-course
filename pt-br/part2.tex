@@ -258,7 +258,7 @@ linha (como no ambiente  \bftt{align*} que vimos na parte 1).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{bibla\TeX}
-\begin{frame}[fragile]{\insertsubsection{} 1}
+\begin{frame}[fragile]{\insertsubsection{} 1} 
 \begin{itemize}
 \item Coloque suas referências em um arquivo  \bftt{.bib}:
 \inputminted[fontsize=\scriptsize,frame=single]{latex}{bib-example.bib}
@@ -295,11 +295,9 @@ formata as referências segundo o padrão ABNT.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{} 3}
 \begin{itemize}
-\item Use o pacote \bftt{natbib} \footnote{Há um novo pacote com mais opções
-chamado \bftt{biblatex} porém a maioria dos modelos de artigos ainda utilizam o 
-  \bftt{natbib}.} com os comandos \cmdbs{citet} e \cmdbs{citep}.
-\item Insira o comando \cmdbs{bibliography} no final do artigo e especifique o
-estilo da referência com \cmdbs{bibliographystyle}.
+\item Use o pacote \bftt{biblatex}  com opções \bftt{style} para formatar as referências\footnote{O estilo \bftt{abnt} está disponível no TeXLive 2016.  \href{\fileuri/bib-example-abnt.pdf}{%
+Veja exemplo aqui}.} e os \cmdbs{cite} e \cmdbs{textcite} para citar no texto.
+\item Insira o comando \cmdbs{addbibresource} para incluir seu arquivo de referências e \cmdbs{printbibliography} para imprimir as referências.
 \end{itemize}
 \begin{minipage}{0.5\linewidth}
 \inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
@@ -307,7 +305,7 @@ estilo da referência com \cmdbs{bibliographystyle}.
 \end{minipage}
 \begin{minipage}{0.4\linewidth}
 \includegraphics[width=\textwidth,clip,trim=1.8in 5in 1.5in 1in]{bib-example.pdf}
-\end{minipage}
+\end{minipage} 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -316,7 +314,7 @@ estilo da referência com \cmdbs{bibliographystyle}.
 \subsection{Exercício}
 \begin{frame}[fragile]{Exercício: Juntando tudo}
 
-Adicione uma imagem e uma bibliografia ao artigo do exercício anterior.
+Adicione uma imagem, uma tabela  e várias bibliografias\footnote{Inclua tipos diferentes como artigo, livro, teses, etc.} ao artigo do exercício anterior.
 
 \begin{enumerate}
 \item Baixe os arquivos abaixo no seu computador.
