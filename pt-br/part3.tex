@@ -265,15 +265,13 @@ A opção \bftt{currentsection}  destaca a seção atual.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Multiple Columns}
+\begin{frame}[fragile]{\insertsection: Múltiplas Colunas}
 \begin{columns}
 \begin{column}{0.4\textwidth}
 \begin{itemize}
-\item Use the \bftt{columns} and \bftt{column} environments to break the slide
-into columns.
-\item The argument for each \bftt{column} determines its width.
-\item See also the \bftt{multicol} package, which automatically breaks your
-content into columns.
+\item Use os ambientes \bftt{columns} e \bftt{column} para quebrar o slide em colunas.
+\item O argumento para cada  \bftt{column} determina sua largura.
+\item Veja também o pacote \bftt{multicol}, que quebra automaticamente  seu conteúdo em colunas.
 \end{itemize}
 \end{column}
 \begin{column}{0.6\textwidth}
@@ -281,13 +279,13 @@ content into columns.
 \begin{columns}
   \begin{column}{0.4\textwidth}
     \begin{itemize}
-    \item Use the columns ...
-    \item The argument ...
-    \item See also the ...
+    \item Use as colunas \ldots
+    \item O argumento \ldots
+    \item Veja também \ldots
     \end{itemize}
   \end{column}
   \begin{column}{0.6\textwidth}
-    % second column
+    % segunda coluna
   \end{column}
 \end{columns}
 \end{minted}
@@ -298,34 +296,34 @@ content into columns.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Highlights}
+\begin{frame}[fragile]{\insertsection: Destaques}
 \begin{itemize}
 
-\item Use \cmdbs{emph} or \cmdbs{alert} to highlight:
+\item Use \cmdbs{emph} ou \cmdbs{alert} para destacar:
 \vskip 1ex
 \begin{exampletwouptiny}
-I should \emph{emphasise} that
-this is an \alert{important} point.
+Eu devo \emph{enfatizar} que este é 
+um ponto \alert{importante}.
 \end{exampletwouptiny}
 \vskip 1ex
 
-\item Or specify bold face or italics:
+\item Ou especifique se quer negrito ou itálico:
 \vskip 1ex
 \begin{exampletwouptiny}
-Text in \textbf{bold face}.
-Text in \textit{italics}.
+Texto em \textbf{negrito}.
+Texto em \textit{itálico}.
 \end{exampletwouptiny}
 \vskip 1ex
 
-\item Or specify a color (American spelling):
+\item Ou especifique a cor (em inglês Americano):
 \vskip 1ex
 \begin{exampletwouptiny}
-It \textcolor{red}{stops}
-and \textcolor{green}{starts}.
+Aqui \textcolor{red}{para}
+e \textcolor{green}{começa}.
 \end{exampletwouptiny}
 \vskip 1ex
-\item See \url{http://www.math.umbc.edu/~rouben/beamer/quickstart-Z-H-25.html}
-for more colors \& custom colors.
+\item Veja \url{https://joerglenhard.wordpress.com/2011/08/01/beamer-customization-colors/}
+para mais cores \& cores customizadas.
 \end{itemize}
 \end{frame}
 
@@ -351,27 +349,30 @@ for more colors \& custom colors.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection: Tables}
 \begin{itemize}
-\item Tables in \LaTeX{} take some getting used to.
-\item Use the \bftt{tabular} environment from the \bftt{tabularx} package.
-\item The argument specifies column alignment --- \textbf{l}eft, \textbf{r}ight, \textbf{r}ight.
+\item Tabelas em \LaTeX{} precisam de atenção.
+\item Use o ambiente \bftt{tabular} do pacote \bftt{tabularx}.
+\item Os argumento que especificam o alinhamento das colunas: \textbf{l} para esquerda (\emph{left}), \textbf{c} para centralizar e \textbf{r} para direita (\emph{right}).
 \begin{exampletwouptiny}
-\begin{tabular}{lrr}
-Item   & Qty & Unit \$ \\
-Widget & 1   & 199.99  \\
-Gadget & 2   & 399.99  \\
-Cable  & 3   & 19.99   \\
+\begin{tabular}{lcr}
+Item    & Qtd. & Unid. \$ \\
+Celular & 1    & 399,99  \\
+Capa    & 2    & 99,99  \\
+Cabo    & 3    & 19,99   \\
 \end{tabular}
 \end{exampletwouptiny}
-\item It also specifies vertical lines; use \cmdbs{hline} for horizontal lines.
+\item É necessário especificar as linhas verticais. Para as linhas horizontais,  use o
+comando \cmdbs{hline}.
 \begin{exampletwouptiny}
-\begin{tabular}{|l|r|r|} \hline
-Item   & Qty & Unit \$ \\\hline
-Widget & 1   & 199.99  \\
-Gadget & 2   & 399.99  \\
-Cable  & 3   & 19.99   \\\hline
+\begin{tabular}{|l|c|r|} \hline
+Item    & Qtd. & Unid. \$ \\\hline
+Celular & 1    & 399,99  \\
+Capa    & 2    & 99,99  \\
+Cabo    & 3    & 19,99   \\\hline
 \end{tabular}
 \end{exampletwouptiny}
-\item Use an ampersand \keystrokebftt{\&} to separate columns and a double backslash \keystrokebftt{\bs}\keystrokebftt{\bs} to start a new row.
+\item Use o ``E comercial''  \keystrokebftt{\&} para separar colunas e barras
+invertidas duplas \keystrokebftt{\bs}\keystrokebftt{\bs} para iniciar uma nova
+linha (como no ambiente  \bftt{align*} que vimos na parte 1).
 \end{itemize}
 \end{frame}
 
@@ -399,11 +400,11 @@ This is really important!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\frametitle{\insertsection: Themes}
+\frametitle{\insertsection: Temas}
 \begin{itemize}
-\item Customise the look of your presentation using themes.
-\item See \url{http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html}
-for a large collection of themes.
+\item Altere a aparência de  suas apresentações  usando \alert{temas}.
+\item Veja \url{http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html}
+para uma grande coleção de temas.
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -438,27 +439,26 @@ also the \cmdbs{only}, \cmdbs{alt}, and \cmdbs{uncover} commands.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Exercise}
+\begin{frame}[fragile]{\insertsection: Exercício}
 
-Recreate Peter Norvig's excellent ``Gettysburg Powerpoint Presentation'' in \bftt{beamer}.\footnote{\url{http://norvig.com/Gettysburg}}
+Recrie a apresentação ``Revolução dos Cravos'' em \bftt{beamer}.
 
 \begin{enumerate}
-\item Open this exercise in \wllogo{}:
+\item Abra o exercício no \wllogo{}:
 \begin{center}
 \fbox{\href{\wlnewdoc{beamer-exercise.tex}}{%
-Click to open this exercise in \wllogo{}}}
+Clique para abrir esse exercício no\wllogo{}}}
 \end{center}
 \vskip 2ex
-\item Download this image to your computer and upload it to \wllogo{} via the
-files menu.
+\item Baixe esta imagem no seu computador e faça o \emph{upload} para o \wllogo{} usando o menu.
 \begin{center}
-\fbox{\href{\fileuri/gettysburg_graph.png?dl=1}{Click to download image}}
+\fbox{\href{\fileuri/Cravos.png?dl=1}{Clique para baixar a imagem}}
 \end{center}
 \vskip 2ex
-\item Add \LaTeX{} commands to the text to make it look like this one:
+\item Adicione comandos \LaTeX{} para seu \bftt{.tex} e faça parecer como esta aqui:
 \begin{center}
 \fbox{\href{\fileuri/beamer-exercise-solution.pdf}{%
-Click to open the model document}}
+Clique para abrir o modelo do documento}}
 \end{center}
 \end{enumerate}
 \end{frame}
