@@ -70,17 +70,16 @@ A chuva na Amazônia \emph{cai} na horizontal.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection: Comandos \& Argumentos}
 \begin{itemize}
-\item Um comando começa com uma \emph{backslash} \keystrokebftt{\bs}.
+\item Um comando começa com uma \emph{barra invertida} \keystrokebftt{\bs}.
 \item Alguns comandos podem receber um \emph{argumento} entre chaves \keystrokebftt{\{}
 \keystrokebftt{\}}.
-\item Alguns comenados também recebem  \emph{argumentos opcionais} enter colchetes \keystrokebftt{[} \keystrokebftt{]}.
+\item Alguns comandos também recebem \emph{argumentos opcionais} entre colchetes \keystrokebftt{[} \keystrokebftt{]}.
 \vskip 2ex
 \begin{exampletwouptiny}
 \includegraphics[
   width=0.5\textwidth]{big_chick}
 
-\includegraphics[
-  width=0.3\textwidth,
+\includegraphics[width=0.3\textwidth,
   angle=270]{big_chick}
 \end{exampletwouptiny}
 \end{itemize}
@@ -96,12 +95,12 @@ A chuva na Amazônia \emph{cai} na horizontal.
 \item Os ambientes \bftt{itemize} e \bftt{enumerate} fazem listas.
 \vskip 2ex
 \begin{exampletwouptiny}
-\begin{itemize} % for bullet points
+\begin{itemize} % para triângulos
 \item Café
 \item Chá
 \end{itemize}
 
-\begin{enumerate} % for numbers
+\begin{enumerate} % para números
 \item Café
 \item Chá
 \end{enumerate}
@@ -126,12 +125,12 @@ A chuva na Amazônia \emph{cai} na horizontal.
 \item Use cifrão  \keystrokebftt{\$} para escrever matemática em um texto corrido.\\[1ex]
 \begin{exampletwouptiny}
 % não tão bom:
-Seja a e b inteiros positivos 
-distintos, e seja  
+Seja a e b inteiros positivos
+distintos, e seja
 c = a - b + 1.
 
 % muito melhor:
-Seja $a$ e $b$ inteiros positivos 
+Seja $a$ e $b$ inteiros positivos
 distintos, e seja
 $c = a - b + 1$.
 \end{exampletwouptiny}
@@ -149,10 +148,9 @@ outro para o final.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection: Estrutura de Documentos}
 \begin{itemize}{\small
-\item Começa com o comando \cmdbs{documentclass} --- determina o tipo de documento.
-\item Metadados (\cmdbs{title} e \cmdbs{author}) e pacotes ficam no 
-preâmbulo.
-\item O texto propriamente dito fica entre \cmdbegin{document} e \cmdend{document}.
+\item O comando \cmdbs{documentclass} --- define o tipo de documento.
+\item Metadados (\cmdbs{title} e \cmdbs{author}) e pacotes ficam no preâmbulo.
+\item O texto fica entre \cmdbegin{document} e \cmdend{document}.
 \item O comando \cmdbs{maketitle} cria o título; comandos \cmdbs{section} criam seções numeradas.
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
@@ -205,8 +203,8 @@ Abra para abrir o modelo do documento}}
 \begin{itemize}
 \item Beamer é um pacote para criar apresentações  (tais como esta!) em
 \LaTeX{}.
-\item Faz uso da classe de documentos \bftt{beamer}.
-\item Usa o ambiente \bftt{frame} para criar slides.
+\item Usa-se a classe de documento \bftt{beamer}.
+\item Usa-se o ambiente \bftt{frame} para criar slides.
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
@@ -239,8 +237,8 @@ Clique aqui para abrir o modelo no \wllogo{}}}
 \begin{frame}[fragile]
 \frametitle{\insertsection: \emph{Slides}}
 \begin{itemize}
-\item Use o comando \cmdbs{frametitle} para colocar título nos slide.
-\item Adicione então conteúdo ao slides.
+\item Use o comando \cmdbs{frametitle} para colocar título nos slides.
+\item Adicione então conteúdo aos slides.
 \item A fonte para esse slide parece-se com isso:
 \vskip 2ex
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -427,7 +425,7 @@ for a large collection of themes.
 \vskip 2ex
 \begin{exampletwouptinynoframe}
 \begin{itemize}
-\item Can you feel the 
+\item Can you feel the
 \pause \item anticipation?
 \end{itemize}
 \end{exampletwouptinynoframe}
@@ -497,7 +495,7 @@ draw surprisingly complicated things.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection: Coordinates}
 \begin{itemize}
-\item The default coordinates are centimeters, with the usual sense: 
+\item The default coordinates are centimeters, with the usual sense:
 \begin{figure}
 \begin{tikzpicture}[scale=0.5]
 \draw[help lines] (0,0) grid (3,3);
@@ -513,7 +511,7 @@ draw surprisingly complicated things.
 \begin{tikzpicture}
 \draw[help lines] (0,0) grid (3,3);
 \end{tikzpicture}
-\end{exampletwouptiny} 
+\end{exampletwouptiny}
 \end{itemize}
 \end{frame}
 
@@ -550,7 +548,7 @@ draw surprisingly complicated things.
 % axes:
 \draw[<->, thick] (0,3)--(0,0)--(3,0);
 % diamond:
-\draw (1.5,0.5) -- (2.5,1.5) -- 
+\draw (1.5,0.5) -- (2.5,1.5) --
       (1.5,2.5) -- (0.5,1.5) --
       cycle; % close the path
 \end{tikzpicture}
@@ -570,10 +568,10 @@ draw surprisingly complicated things.
 \draw[help lines] (0,0) grid (3,3);
 % axes
 \draw[<->, thick, red]
-  (0,3)--(0,0)--(3,0); 
+  (0,3)--(0,0)--(3,0);
 % diamond
 \draw[thick, blue, fill=yellow]
-  (1.5,0.5) -- (2.5,1.5) -- 
+  (1.5,0.5) -- (2.5,1.5) --
   (1.5,2.5) -- (0.5,1.5) --
   cycle;
 \end{tikzpicture}
@@ -631,7 +629,7 @@ draw surprisingly complicated things.
 % y axis
 \draw[<->, thick] (0,2) -- (0,-2);
 % x axis
-\draw[ ->, thick] (0,0) -- (7, 0); 
+\draw[ ->, thick] (0,0) -- (7, 0);
 % curves
 \draw[cyan,domain=0:2*pi]
   plot (\x, {sin(\x r)});
