@@ -1,11 +1,13 @@
 \documentclass[12pt]{article}
-
-  \usepackage[brazil]{babel} % Adicionado para poder usar os Caracteres Portugueses
-  \usepackage[T1]{fontenc} % Adicionado para poder usar os Caracteres Portugueses
-  \usepackage[utf8]{inputenc} % Adicionado para poder usar os Caracteres Portugueses
-
-
+\usepackage[brazil]{babel} 
+\usepackage[T1]{fontenc} % Adicionado para poder usar os Caracteres Portugueses
+\usepackage[utf8]{inputenc}
 \usepackage{url}
+\usepackage[style = numeric,  
+sortcites,language = brazil]{biblatex}
+\usepackage{csquotes}
+\addbibresource{bib-exercise.bib}
+
 
 \title{Dez Segredos Para uma Boa Apresentação}
 \author{Você}
@@ -37,7 +39,7 @@ Compilei esta lista pessoal de ``Segredos'' depois de ouvir apresentações efic
 \begin{equation}
 n = \gamma \left( \frac{1}{2} \right)^q
 \end{equation}
-em 	que $\gamma$ é a constante de proporcionalidade.
+em 	que $\gamma$ é a constante de proporcionalidade\cite{Valente1999,Boyce2010}.
 
 \item A conclusão deve conter apenas os pontos chave. As pessoas não se lembram de mais que 2 ou 3 coisas de uma apresentação, principalmente se tiverem ouvido várias apresentações em grandes conferências.
 
@@ -56,10 +58,11 @@ em 	que $\gamma$ é a constante de proporcionalidade.
 
 \end{itemize}
 
-\item Sê pessoal a responder a questões.
+\item Seja pessoal a responder a questões \cite{Strang2013,Saviani1980}.
 
 \item Usa humor sempre que possível. É fascinante como uma piada seca consegue fazer as pessoas rir numa conferência científica.
 
 \end{enumerate}
 
+\printbibliography
 \end{document}
