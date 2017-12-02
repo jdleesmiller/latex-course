@@ -61,5 +61,5 @@ Credits
 
 * Diana A -- found that exercise links had broken
 * Sana A -- pointed out an error in part 1
-* Andy Roberts -- the chick(en) image is from [one of his articles](http://www.andy-roberts.net/writing/latex/importing_images)
+* Andy Roberts -- an earlier version of this course used an image from one of his articles
 * Ruby Trinh -- for organising the original short courses
