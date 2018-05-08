@@ -9,7 +9,7 @@ part1.pdf: part1.tex preamble.tex
 #
 # Part 2
 #
-part2.pdf: part2.tex preamble.tex structure-title.pdf structure-sections.pdf structure-crossref.pdf media-graphics.pdf bib-example.pdf structure-exercise-solution.pdf
+part2.pdf: part2.tex preamble.tex structure-title.pdf structure-sections.pdf structure-crossref.pdf media-graphics.pdf bib-example.pdf bib-example-abnt.pdf structure-exercise-solution.pdf
 	latexmk -pdf -xelatex  -interaction=nonstopmode -shell-escape -synctex=1 -8bit part2
 
 structure-title.pdf: structure-title.tex
@@ -31,6 +31,8 @@ media-graphics.pdf: media-graphics.tex
 bib-example.pdf: bib-example.tex
 	latexmk -pdf  -interaction=nonstopmode -shell-escape -synctex=1 -8bit bib-example
 
+bib-example-abnt.pdf: bib-example-abnt.tex
+	latexmk -pdf  -interaction=nonstopmode -shell-escape -synctex=1 -8bit bib-example-abnt
 
 #
 # Part 3
@@ -59,7 +61,7 @@ beamer-exercise.pdf: beamer-exercise.tex
 beamer-exercise-solution.pdf: beamer-exercise-solution.tex
 	latexmk -pdf  -interaction=nonstopmode -shell-escape -synctex=1 -8bit beamer-exercise-solution
 
-latex-course-pt-BR.tgz: part1.pdf part2.pdf part3.pdf basics-exercise-1-solution.tex basics-exercise-1.tex basics-exercise-2-solution.tex basics-exercise-2.tex basics.tex bib-example.tex preamble.tex structure-exercise-solution.tex structure-exercise-solution.pdf structure-exercise.tex big_chick.png bib-exercise.bib recap-exercise.tex recap-exercise-solution.pdf beamer-minimal.tex beamer-exercise.tex beamer-exercise-solution.pdf gettysburg_graph.png
+latex-course-pt-BR.tgz: part1.pdf part2.pdf part3.pdf basics-exercise-1-solution.tex basics-exercise-1.tex basics-exercise-2-solution.tex basics-exercise-2.tex basics.tex bib-example.tex preamble.tex structure-exercise-solution.tex structure-exercise-solution.pdf structure-exercise.tex gerbil.jpg bib-exercise.bib recap-exercise.tex recap-exercise-solution.pdf beamer-minimal.tex beamer-exercise.tex beamer-exercise-solution.pdf gettysburg_graph.png
 	tar czf latex-course.tgz $^
 
 clean:

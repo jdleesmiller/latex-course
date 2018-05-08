@@ -158,14 +158,14 @@ clique aqui para ver a solução}}.
 \end{itemize}
 \begin{exampletwouptiny}
 \includegraphics[
-  width=0.5\textwidth]{big_chick}
+  width=0.5\textwidth]{gerbil}
 
 \includegraphics[
   width=0.3\textwidth,
-  angle=270]{big_chick}
+  angle=270]{gerbil}
 \end{exampletwouptiny}
 
-\tiny{Image from \url{http://www.andy-roberts.net/writing/latex/importing_images}}
+\tiny{Licença para imagem: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -292,10 +292,9 @@ formata as referências --- e o texto também --- segundo o padrão ABNT.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{} turbinado --- biblatex}
+\begin{frame}[fragile]{\insertsubsection{} turbinado --- \bftt{biblatex}}
 \begin{itemize}
-\item Use o pacote \bftt{biblatex}  com opções \bftt{style} para formatar as referências\footnote{O estilo \bftt{abnt} do \bftt{biblatex}  está disponível somente a partir do TeXLive 2016.\href{\fileuri/bib-example-abnt.pdf}{%
-Veja aqui exemplo formatado com abnt}.} e  \cmdbs{cite} e \cmdbs{textcite} para citar no texto.
+\item Use o pacote \bftt{biblatex}  com opções \bftt{style} para formatar as referências (\bftt{numeric} é a preferida dos matemáticos) e  \cmdbs{cite} e \cmdbs{textcite} para citar no texto.
 \item Insira o comando \cmdbs{addbibresource} para incluir seu arquivo de referências e \cmdbs{printbibliography} para imprimi-las.
 \end{itemize}
 \begin{minipage}{0.5\linewidth}
@@ -304,6 +303,23 @@ Veja aqui exemplo formatado com abnt}.} e  \cmdbs{cite} e \cmdbs{textcite} para 
 \end{minipage}
 \begin{minipage}{0.4\linewidth}
 \includegraphics[width=\textwidth,clip,trim=1.8in 5in 1.5in 1in]{bib-example.pdf}
+\end{minipage} 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsubsection{} turbinado II --- \bftt{biblatex} e  norma ABNT}
+\begin{itemize}
+\item  A partir do TeXLive 2016 está disponível o estilo \bftt{abnt} no \bftt{biblatex}.
+\item Basta colocar  como opção \bftt{style = abnt}. Todo o resto, o \LaTeX{} faz pra você.
+\end{itemize}
+\begin{minipage}{0.5\linewidth}
+\inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
+  {bib-example-abnt.tex}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+\includegraphics[width=\textwidth,clip,trim=1.8in 5in 1.5in 1in]{bib-example-abnt.pdf}
 \end{minipage} 
 \end{frame}
 
@@ -319,7 +335,7 @@ Adicione uma imagem, uma tabela  e várias bibliografias\footnote{Inclua tipos d
 \item Baixe os arquivos abaixo no seu computador.
 
 \begin{center}
-\fbox{\href{\fileuri/big_chick.png?dl=1}{Clique para baixar a imagem}}
+\fbox{\href{\fileuri/gerbil.jpg?dl=1}{Clique para baixar a imagem}}
 
 \fbox{\href{\fileuri/bib-exercise.bib?dl=1}{Clique para baixar o arquivo .bib}}
 \end{center}

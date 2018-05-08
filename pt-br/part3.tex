@@ -81,10 +81,10 @@ A chuva na Amazônia \emph{cai} na horizontal.
 \vskip 2ex
 \begin{exampletwouptiny}
 \includegraphics[
-  width=0.5\textwidth]{big_chick}
+  width=0.5\textwidth]{gerbil}
 
 \includegraphics[width=0.3\textwidth,
-  angle=270]{big_chick}
+  angle=270]{gerbil}
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -342,7 +342,7 @@ para mais cores \& cores customizadas.
 \begin{exampletwouptiny}
 \begin{figure}
 \includegraphics[
-  width=0.5\textwidth]{big_chick}
+  width=0.5\textwidth]{gerbil}
 \end{figure}
 \end{exampletwouptiny}
 \end{itemize}
@@ -470,25 +470,24 @@ Clique para abrir o modelo do documento}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Drawings with \protect\tikzname}
+\section{Desenhando com \protect\tikzname}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection}
 \begin{itemize}
-\item \tikzname{} is a package for drawing figures in \LaTeX.
-\item It defines a powerful drawing language inside \LaTeX{}. Short programs can
-draw surprisingly complicated things.
+\item \tikzname{} é um pacote para desenhar figuras em \LaTeX.
+\item Define uma poderosa linguagem de desenho dentro do  \LaTeX{}. Códigos curtos podem desenhar coisas surpreendentemente complicadas.
 \begin{figure}
 \href{http://www.texample.net/tikz/examples/rotated-triangle/}{%
   \includegraphics[width=0.35\textwidth]{rotated-triangle}}
 \end{figure}
-\item We'll start with simple things. To draw a line in \tikzname:
+\item Começaremos com coisas simples. Para desenhar um segmento de reta  em \tikzname:
 \vskip 1ex
 \begin{exampletwouptiny}
 \begin{tikzpicture}
-\draw (0,0) -- (1,1); % a line
+\draw (0,0) -- (1,1); % um segmetno de  reta
 \end{tikzpicture}
 \end{exampletwouptiny}
 \end{itemize}
@@ -497,9 +496,9 @@ draw surprisingly complicated things.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Coordinates}
+\begin{frame}[fragile]{\insertsection: Coordenadas}
 \begin{itemize}
-\item The default coordinates are centimeters, with the usual sense:
+\item O padrão para coordenadas são em centímetros, com o sentido usual:
 \begin{figure}
 \begin{tikzpicture}[scale=0.5]
 \draw[help lines] (0,0) grid (3,3);
@@ -509,7 +508,7 @@ draw surprisingly complicated things.
 \node[above left] at (0,3) {$(0,3)$};
 \end{tikzpicture}
 \end{figure}
-\item It helps to draw a grid when you are working with \tikzname:
+\item Quando você está trabalhando com \tikzname, linhas de grade são de grande ajuda:
 \vskip 1ex
 \begin{exampletwouptiny}
 \begin{tikzpicture}
@@ -524,8 +523,8 @@ draw surprisingly complicated things.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection: Lines}
 \begin{itemize}
-\item Arrow heads and line styles are specified as options to the \cmdbs{draw} command.
-\item End each draw command with a \keystrokebftt{;} semicolon.
+\item Tipos de flecha e estilo de linhas são especificadas como opções ao comando \cmdbs{draw}.
+\item Cada comando de desenho deve ser finalizado com um ponto e vírgula: \keystrokebftt{;}.
 \vskip 1ex
 \begin{exampletwouptiny}
 \begin{tikzpicture}
@@ -541,10 +540,10 @@ draw surprisingly complicated things.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Paths}
+\begin{frame}[fragile]{\insertsection: Caminhos}
 \begin{itemize}
-\item You can specify multiple points to form a path.
-\item Arrows will appear only at the ends of the path.
+\item Você pode especificar múltiplos pontos para formar um caminho.
+\item Flechas aparecerão apenas no final do caminho.
 \vskip 1ex
 \begin{exampletwouptiny}
 \begin{tikzpicture}
@@ -563,9 +562,9 @@ draw surprisingly complicated things.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Colours}
+\begin{frame}[fragile]{\insertsection: Cores}
 \begin{itemize}
-\item Colours are also specified as options to \cmdbs{draw}.
+\item Cores são também especificadas como opções ao comanado \cmdbs{draw}.
 \vskip 1ex
 \begin{exampletwouptiny}
 \begin{tikzpicture}
@@ -586,9 +585,9 @@ draw surprisingly complicated things.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Shapes}
+\begin{frame}[fragile]{\insertsection: Formas}
 \begin{itemize}
-\item \tikzname{} has built-in commands for simple shapes.
+\item \tikzname{} tem comandos internos para formas simples.
 \vskip 1ex
 \begin{exampletwouptiny}
 \begin{tikzpicture}
@@ -603,10 +602,10 @@ draw surprisingly complicated things.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Nodes \& Labels}
+\begin{frame}[fragile]{\insertsection: Nós \& Legendas}
 \begin{itemize}
-\item Use nodes to place text (and math) in \tikzname{} drawings.
-\item You can also use nodes as coordinates --- useful for diagrams.
+\item Utilize nós (comando \cmdbs{node}) para colocar texto (e texto matemático) em desenhos do \tikzname{}.
+\item Você também pode utilizar nós como coordenadas --- muito útil para diagramas.
 \vskip 1ex
 \begin{exampletwouptiny}
 \begin{tikzpicture}
@@ -624,9 +623,9 @@ draw surprisingly complicated things.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Functions}
+\begin{frame}[fragile]{\insertsection: Funções}
 \begin{itemize}
-\item You can even plot some simple functions.
+\item Também é possível graficar algumas funções simples.
 \vskip 1ex
 \begin{exampletwouptiny}
 \begin{tikzpicture}[scale=0.5]
@@ -647,9 +646,9 @@ draw surprisingly complicated things.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Examples}
+\begin{frame}[fragile]{\insertsection: Exemplos}
 \begin{itemize}
-\item Check out \fbox{\href{http://texample.net/tikz/}{\TeX{}ample.net}} for many \tikzname{} examples:
+\item Dê uma olhada em  \fbox{\href{http://texample.net/tikz/}{\TeX{}ample.net}} para muitos outros exemplos com \tikzname{}:
 \end{itemize}
 \begin{figure}
 \href{http://texample.net/tikz/examples/escher-brick-penrose-triangle/}{%
@@ -664,8 +663,8 @@ draw surprisingly complicated things.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Exercise}
-Draw this in \tikzname:\footnote{Based on \url{http://xkcd.com/1022}}
+\begin{frame}[fragile]{\insertsection: Exercício}
+Desenhe a figura abaixo em \tikzname:\footnote{Baseado em \url{http://xkcd.com/1022}}
 \begin{figure}
 \input{tikz-exercise-solution}
 \end{figure}
@@ -674,29 +673,29 @@ Draw this in \tikzname:\footnote{Based on \url{http://xkcd.com/1022}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Notes with \protect\bftt{todonotes}}
+\section{Notas com  \protect\bftt{todonotes}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection}
 \begin{itemize}
-\item The \cmdbs{todo} command from the \bftt{todonotes} package is great for
-leaving notes to yourself and your collaborators.
+\item O comando \cmdbs{todo} do pacote \bftt{todonotes} é ótimo para deixar notas em 
+textos \LaTeX{} para você ou para seus colaboradores.
 \begin{exampletwouptiny}
-\todo{add results}
-\todo[color=blue!20]{fix method}
+\todo{adicione resultados}
+\todo[color=blue!20]{arrume o método}
 \end{exampletwouptiny}
 \vskip 2ex
-\item Pro Tip: define your own commands with \cmdbs{newcommand}
+\item Dica quente: defina o seu próprio comando com \cmdbs{newcommand}
 \begin{minted}[fontsize=\scriptsize,frame=single]{latex}
 \newcommand{\alice}[1]{\todo[color=green!40]{#1}}
 \newcommand{\bob}[1]{\todo[color=purple!40]{#1}}
 \end{minted}
-This can save a lot of typing:
+Isso pode economizar muita digitação:
 \begin{exampletwouptiny}
-\alice{add results}
-\bob{fix method}
+\alice{adicione resultados}
+\bob{arrume o método}
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -708,9 +707,8 @@ This can save a lot of typing:
 \begin{columns}
   \begin{column}{0.4\textwidth}
     \begin{itemize}
-    \item Only inline notes are supported with beamer, but margin notes are
-    supported for normal documents.
-    \item There is also a handy \cmdbs{listoftodos} command.
+    \item Apenas notas  \emph{inline} são suportadas pelo \keystrokebftt{beamer}, mas notas na margem são suportadas por documentos normais.
+    \item Há também um comando \cmdbs{listoftodos} bem útil.
     \end{itemize}
   \end{column}
   \begin{column}{0.6\textwidth}
@@ -722,16 +720,15 @@ This can save a lot of typing:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Spreadsheets with \protect\bftt{spreadtab}}
+\section{Planilhas com \protect\bftt{spreadtab}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection}
 \begin{itemize}
-\item Now that you've seen how \LaTeX{} can replace Word and PowerPoint, what
-about Excel?
-\item Homework: try the \fbox{\href{http://www.ctan.org/pkg/spreadtab}{\bftt{spreadtab} package}}!
+\item Agora que você viu como \LaTeX{} pode substituir  Word e PowerPoint, que tal Excel?
+\item Tarefa: tente o pacote \fbox{\href{http://www.ctan.org/pkg/spreadtab}{\bftt{spreadtab}}}!
 \end{itemize}
 \end{frame}
 
@@ -740,7 +737,7 @@ about Excel?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \begin{center}
-Thanks, and happy \TeX{}ing!
+Obrigado, e seja feliz escrevendo seus próximos \TeX{}tos!
 \end{center}
 \end{frame}
 

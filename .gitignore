@@ -1,4 +1,4 @@
-## Core latex/pdflatex auxiliary files:
+## Core latex/pdflatex/xelatex auxiliary files:
 *.aux
 *.lof
 *.log
@@ -6,6 +6,7 @@
 *.fls
 *.out
 *.toc
+*.xdv
 
 ## Intermediate documents:
 *.dvi
