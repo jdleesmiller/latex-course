@@ -1,22 +1,24 @@
 latex-course
 ============
 
-Slides for an introductory course on LaTeX. The slides and their LaTeX source
-code are provided in [this github repository](https://github.com/jdleesmiller/latex-course) under a permissive MIT license.
+*Slides* para um curso introdutório de LaTeX. Estes *slides* e seu código-fonte em LaTeX 
+são disponibilizados [neste repositóriodo github](https://github.com/lrsantos11/latex-course) sob  a permissiva licença  MIT.
 
-The aim is to get students writing in LaTeX as quickly as possible. The material is presented as a set of examples, and broader concepts and techniques are explained as they arise. Each part includes exercises that can be completed on [Overleaf](https://www.overleaf.com), the free online LaTeX editor, so you don't have to worry about getting LaTeX and related tools installed on everyone's computers.
+O Objetivo é fazer com que estudantes comecem a escrever em LaTeX tão rápido quanto possível. O material é apresentado
+como um cojunto de exemplos, e conceitos e técnicas mais avançadas são explicadas quando aparecem. Cada parte inclui exercícios
+que podem ser completados no [Overleaf](https://www.overleaf.com), um editor de LaTeX *online* e gratuito, tal que
+você não rprecisa se preocupar em instalar o LaTeX e suas ferramentas relacionadas no computador de todos.
 
-These slides were originally used to deliver two two-hour workshops, but there is probably enough material for three workshops, so there are three parts:
+Estes *slides* foram usados originalmente para um mini-curso de duas horas, mas há material suficiente para
+um mini-curso com três partes, então há três partes:
 
-1. [The Basics](http://jdleesmiller.github.io/latex-course/en/part1.pdf): ideas, syntax, equations, environments, packages
+1. [O básico](http://jdleesmiller.github.io/latex-course/pt-br/part1.pdf): ideias, sintaxe, equações, ambientes, pacotes
 
-1. [Structed Documents &
-More](http://jdleesmiller.github.io/latex-course/en/part2.pdf): titles, sections, cross-references, figures, tables, bibliographies.
+1. [Documentos extruturados  & mais](http://jdleesmiller.github.io/latex-course/pt-br/part2.pdf): títulos, seções, referências cruzadas,  figuras, tabelas, bibliografias.
 
-1. [Not Just Papers: Presentations & More](http://jdleesmiller.github.io/latex-course/en/part3.pdf): recap exercise, presentations with beamer, drawings with
-tikz.
+1. [Não só artigos: Apresentações & Mais](http://jdleesmiller.github.io/latex-course/pt-br/part3.pdf): exercícios para lembrança, apresentações com beamer, desenhos com  tikz.
 
-Feel free to use however you like --- contributions welcome!
+Sinta-se a vontade para usar conforme deseje --- contribuições são bem-vindas!
 
 Development
 -----------
