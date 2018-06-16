@@ -66,7 +66,7 @@ exercise files to github, the slides will load them up in Overleaf.
 
 The `deploy-to-gh-pages.sh` script builds the slides using the Makefile and
 copies the slides over to the `gh-pages` branch, which is available at
-`https://jdlm.info/latex-course` thanks to
+`http://jdlm.info/latex-course` thanks to
 [github pages](http://pages.github.com/).
 
 License
