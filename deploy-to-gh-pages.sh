@@ -12,6 +12,7 @@ if ! git diff-index --quiet HEAD --; then
 fi
 
 set -ex
+shopt -s dotglob
 
 LANGUAGES="en fr"
 
@@ -37,8 +38,10 @@ for language in $LANGUAGES; do
 done
 
 echo '<html><head><title>latex-course</title></head><body><a href="https://github.com/jdleesmiller/latex-course">Please see repository.</a></body></html>' > index.html
+echo '.*.swp' > .gitignore
 
 cd ..
+
 
 # destroy current content of the gh-pages branch
 git checkout gh-pages
@@ -51,3 +54,4 @@ rmdir deploy
 git add .
 git commit -am "deploy-to-gh-pages"
 git push origin --all
+git checkout master
