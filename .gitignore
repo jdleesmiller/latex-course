@@ -9,6 +9,7 @@
 *.bbl
 *.blg
 .*.swp
+_minted-part*
 en/part1.pdf
 en/part2.pdf
 en/part3.pdf
