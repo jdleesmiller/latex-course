@@ -42,7 +42,6 @@ echo '.*.swp' > .gitignore
 
 cd ..
 
-
 # destroy current content of the gh-pages branch
 git checkout gh-pages
 git rm -rf .
