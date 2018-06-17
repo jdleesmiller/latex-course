@@ -2,7 +2,7 @@
 
 \input{preamble.tex}
 
-\subtitle{Première parte : les bases}
+\subtitle{PremiÃ¨re parte : les bases}
 
 \begin{document}
 
@@ -20,17 +20,17 @@
 \begin{itemize}
 \item Il produit des beaux documents
 \begin{itemize}
-\item Et plus particulièrement quand ils contiennent des mathématiques
+\item Et plus particuliÃ¨rement quand ils contiennent des mathÃ©matiques
 \end{itemize}
 %
-\item Il a été créé par des scientifiques pour des scientifiques
+\item Il a Ã©tÃ© crÃ©Ã© par des scientifiques pour des scientifiques
 \begin{itemize}
-\item Une communauté large et active
+\item Une communautÃ© large et active
 \end{itemize}
 %
-\item Il est puissant --- vous pouvez l'étendre
+\item Il est puissant --- vous pouvez l'Ã©tendre
 \begin{itemize}
-\item Il comporte des packages pour les publis, les présentations, les tableurs...
+\item Il comporte des packages pour les publis, les prÃ©sentations, les tableurs...
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -40,20 +40,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Comment fonctionne-t-il ?}
 \begin{itemize}
-\item Vous écrivez votre document en \texttt{texte brut} parsemé de \cmd{commandes} qui
-décrivent sa structure et son contenu.
-\item Le programme \texttt{latex} traite votre texte et vos commandes, pour produire un document magnifiquement présenté.
+\item Vous Ã©crivez votre document en \texttt{texte brut} parsemÃ© de \cmd{commandes} qui
+dÃ©crivent sa structure et son contenu.
+\item Le programme \texttt{latex} traite votre texte et vos commandes, pour produire un document magnifiquement prÃ©sentÃ©.
 \end{itemize}
 \vskip 2ex
 \begin{center}
 \begin{minted}[frame=single]{latex}
-La plume est plus \emph{forte} que l'épée.
+La plume est plus \emph{forte} que l'Ã©pÃ©e.
 \end{minted}
 \vskip 2ex
 \tikz\node[single arrow,fill=gray,font=\ttfamily\bfseries,%
   rotate=270,xshift=-1em]{latex};
 \vskip 2ex
-\fbox{La plume est plus \emph{forte} que l'épée.}
+\fbox{La plume est plus \emph{forte} que l'Ã©pÃ©e.}
 \end{center}
 \end{frame}
 
@@ -63,7 +63,7 @@ La plume est plus \emph{forte} que l'épée.
 \begin{frame}[fragile]{Plus d'exemples de commandes et de leurs sorties...}
 \begin{exampletwoup}
 \begin{itemize}
-\item Thé
+\item ThÃ©
 \item Lait
 \item Biscuits
 \end{itemize}
@@ -90,7 +90,7 @@ La plume est plus \emph{forte} que l'épée.
 \begin{frame}[fragile]{Changement d'attitude}
 
 \begin{itemize}
-\item Utilisez des commandes qui décrivent \og{}ce que c'est\fg{} et non pas \og{}à quoi il doit ressembler\fg{}.
+\item Utilisez des commandes qui dÃ©crivent \og{}ce que c'est\fg{} et non pas \og{}Ã  quoi il doit ressembler\fg{}.
 \item Focalisez-vous sur votre contenu.
 \item Laissez \LaTeX{} faire son travail.
 \end{itemize}
@@ -111,7 +111,7 @@ La plume est plus \emph{forte} que l'épée.
 \inputminted[frame=single]{latex}{basics.tex}
 \item Les commandes commencent par un \emph{antislash} \keystrokebftt{\bs}.
 \item Chaque document commence par une commande \cmdbs{documentclass}.
-\item L'\emph{argument} entre accolades \keystrokebftt{\{} \keystrokebftt{\}} informe \LaTeX{} sur le type de document vous êtes en train de créer : un \bftt{article}.
+\item L'\emph{argument} entre accolades \keystrokebftt{\{} \keystrokebftt{\}} informe \LaTeX{} sur le type de document vous Ãªtes en train de crÃ©er : un \bftt{article}.
 \item Un signe pourcent \keystrokebftt{\%} commence un \emph{commentaire} --- \LaTeX{}
 va ignorer le reste de la ligne.
 \end{itemize}
@@ -122,18 +122,18 @@ va ignorer le reste de la ligne.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{} with \wllogo}
 \begin{itemize}
-\item Overleaf est un site Web pour écrire des documents en \LaTeX.
-\item Il \og{}compile\fg{} votre code \LaTeX{} automatiquement et vous montre les résultats.
+\item Overleaf est un site Web pour Ã©crire des documents en \LaTeX.
+\item Il \og{}compile\fg{} votre code \LaTeX{} automatiquement et vous montre les rÃ©sultats.
 \vskip 2em
 \begin{center}
 \fbox{\href{\wlnewdoc{basics.tex}}{%
 Cliquer ici pour ouvrir l'exemple de document dans \wllogo{}}}
 \\[1ex]\scriptsize{}
-Pour obtenir les meilleurs résultats possibles, utilisez \href{http://www.google.com/chrome}{Google Chrome} ou un \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox} récent.
+Pour obtenir les meilleurs rÃ©sultats possibles, utilisez \href{http://www.google.com/chrome}{Google Chrome} ou un \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox} rÃ©cent.
 \end{center}
 \vskip 2ex
 \item En parcourant les transparents suivants, essayez les exemples en les tapant dans le document d'exemple sur Overleaf.
-\item \textbf{Non, vraiment, vous devriez les essayer pendant que nous avançons !}
+\item \textbf{Non, vraiment, vous devriez les essayer pendant que nous avanÃ§ons !}
 \end{itemize}
 \end{frame}
 
@@ -147,16 +147,16 @@ Pour obtenir les meilleurs résultats possibles, utilisez \href{http://www.google
 \item Tapez votre texte entre \cmdbegin{document} et \cmdend{document}.
 \item Le plus souvent vous pouvez taper votre texte normalement.
 \begin{exampletwouptiny}
-Les mots sont séparés par
+Les mots sont sÃ©parÃ©s par
 un ou plusieurs espaces.
 
-Les paragraphes sont séparés
+Les paragraphes sont sÃ©parÃ©s
 par une ou plusieurs lignes blanches.
 \end{exampletwouptiny}
-\item Quelque soit le nombre de blancs consécutifs dans votre code source, dans la sortie vous n'aurez qu'un seul blanc.
+\item Quelque soit le nombre de blancs consÃ©cutifs dans votre code source, dans la sortie vous n'aurez qu'un seul blanc.
 \begin{exampletwouptiny}
 La   plume       est plus forte
-que l'épée.
+que l'Ã©pÃ©e.
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -164,29 +164,29 @@ que l'épée.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{} : points délicats}
+\begin{frame}[fragile]{\insertsubsection{} : points dÃ©licats}
 \small
 \begin{itemize}
-\item Les guillemets américains sont particuliers : 
-tapez un accent grave \keystroke{\`{}} à gauche et une apostrophe \keystroke{\'{}} à droite du mot.
+\item Les guillemets amÃ©ricains sont particuliers : 
+tapez un accent grave \keystroke{\`{}} Ã  gauche et une apostrophe \keystroke{\'{}} Ã  droite du mot.
 \begin{exampletwouptiny}
-Guillemets américains
+Guillemets amÃ©ricains
 simples : `text'.
 
-Guillemets américains
+Guillemets amÃ©ricains
 doubles : ``text''.
 \end{exampletwouptiny}
 
-\item Quelques caractères fréquents ont un sens particulier sous \LaTeX:\\[1ex]
+\item Quelques caractÃ¨res frÃ©quents ont un sens particulier sous \LaTeX:\\[1ex]
 \begin{tabular}{cl}
 \keystrokebftt{\%} & le signe pourcent                 \\
-\keystrokebftt{\#} & la dièse                       \\
+\keystrokebftt{\#} & la diÃ¨se                       \\
 \keystrokebftt{\&} & l'esperluette                  \\
 \keystrokebftt{\$} & le signe de dollar             \\
 \end{tabular}
 \item En les tapant directement vous aurez une erreur. 
 
-Si vous voulez les \mbox{obtenir} dans la sortie, il faut les \emph{protéger} en les précédant par un antislash.
+Si vous voulez les \mbox{obtenir} dans la sortie, il faut les \emph{protÃ©ger} en les prÃ©cÃ©dant par un antislash.
 \begin{exampletwoup}
 \$\%\&\#!
 \end{exampletwoup}
@@ -196,33 +196,33 @@ Si vous voulez les \mbox{obtenir} dans la sortie, il faut les \emph{protéger} en
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Pour écrire en français (rédigé par Yannis Haralambous)}
+\begin{frame}[fragile]{Pour Ã©crire en franÃ§ais (rÃ©digÃ© par Yannis Haralambous)}
 \small
 \begin{itemize}
-\item Pour écrire des documents en français, inclure dans le préambule :
+\item Pour Ã©crire des documents en franÃ§ais, inclure dans le prÃ©ambule :
 \begin{verbatim}
 \usepackage[english,french]{babel}
 \usepackage[T1]{fontenc}
 \end{verbatim}
-\item Voici quelques commandes utiles (qui parlent d'elles-mêmes) :
+\item Voici quelques commandes utiles (qui parlent d'elles-mÃªmes) :
 \begin{exampletwouptiny}
 Nos chers \og{}guillemets\fg{}.
 
 {\OE}il, c{\oe}ur, b{\oe}uf...
 
 Le n\up{o}~13 et les n\up{os}~5 et 6,
-à ne pas confondre avec les 
+Ã  ne pas confondre avec les 
 37,2~\textdegree C, ou l'alcool 
-à 80\textdegree.
+Ã  80\textdegree.
 
 M\up{me}, M\up{elle}, le 1\up{er}
-du mois, était-ce la 1\up{re}, 
+du mois, Ã©tait-ce la 1\up{re}, 
 la 2\up{e} ou la $n$\up{e}~fois ?
-Vive le \textsc{xxi}\up{e}~siècle !
-Les nombres s'écrivent 65\,536,
+Vive le \textsc{xxi}\up{e}~siÃ¨cle !
+Les nombres s'Ã©crivent 65\,536,
 1\,000\,000, et ainsi de suite...
 \end{exampletwouptiny}
-\item Pour plus d'infos, consultez le \emph{Lexique des règles typographiques en usage à l'Imprimerie nationale}, Paris, Imprimerie nationale, 2006.
+\item Pour plus d'infos, consultez le \emph{Lexique des rÃ¨gles typographiques en usage Ã  l'Imprimerie nationale}, Paris, Imprimerie nationale, 2006.
 \end{itemize}
 \end{frame}
 
@@ -232,17 +232,17 @@ Les nombres s'écrivent 65\,536,
 \begin{frame}[fragile]{Gestion des erreurs}
 \begin{itemize}
 \item \LaTeX{} peut ne pas accepter une partie de votre code. Dans ce cas
-il va s'arrêter en affichant un message d'erreur, c'est à vous de corriger
+il va s'arrÃªter en affichant un message d'erreur, c'est Ã  vous de corriger
 cette erreur pour qu'il puisse produire votre document.
-\item Par exemple, si vous tapez \cmdbs{meph} au lieu de \cmdbs{emph}, \LaTeX{} s'arrêtera
-en affichant un message de \og{}commande non définie\fg{} puisque \og{}meph\fg{} ne fait
-pas partie des commandes qu'il connaît.
+\item Par exemple, si vous tapez \cmdbs{meph} au lieu de \cmdbs{emph}, \LaTeX{} s'arrÃªtera
+en affichant un message de \og{}commande non dÃ©finie\fg{} puisque \og{}meph\fg{} ne fait
+pas partie des commandes qu'il connaÃ®t.
 \end{itemize}
 \begin{block}{Conseils concernant les erreurs}
 \begin{enumerate}
-\item Ne paniquez pas ! Ça arrive à tout le monde de faire des erreurs.
-\item Corrigez-les aussitôt qu'elles apparaissent --- si votre saisie provoque une erreur, commencez le débogage à cet endroit.
-\item S'il y a plus d'une erreurs, commencez par la première --- la cause peut être située avant-même celle-ci.
+\item Ne paniquez pas ! Ã‡a arrive Ã  tout le monde de faire des erreurs.
+\item Corrigez-les aussitÃ´t qu'elles apparaissent --- si votre saisie provoque une erreur, commencez le dÃ©bogage Ã  cet endroit.
+\item S'il y a plus d'une erreurs, commencez par la premiÃ¨re --- la cause peut Ãªtre situÃ©e avant-mÃªme celle-ci.
 \end{enumerate}
 \end{block}
 \end{frame}
@@ -254,12 +254,12 @@ pas partie des commandes qu'il connaît.
 
 \begin{block}{Composez ceci en \LaTeX\footnote{\url{http://en.wikipedia.org/wiki/Economy_of_the_United_States}}:
 }
-En mars 2006, le Congrès américain a relevé
+En mars 2006, le CongrÃ¨s amÃ©ricain a relevÃ©
 ce plafond de 0,79~mille milliards de \$ pour
-arriver à 8,97 mille milliards de \$, qui est
+arriver Ã  8,97 mille milliards de \$, qui est
 environ 68\% du PIB. Le 4 octobre 2008, la loi
-de \og{}stabilisation économique urgente\fg{} de
-2008 a relevé le plafond actuel de la dette à
+de \og{}stabilisation Ã©conomique urgente\fg{} de
+2008 a relevÃ© le plafond actuel de la dette Ã 
 11,3 mille milliards de \$.
 \end{block}
 \vskip 2ex
@@ -269,8 +269,8 @@ Cliquez pour ouvrir cet exercice sous \wllogo{}}}
 \end{center}
 
 \begin{itemize}
-\item Tuyau : attention aux caractères qui ont une signification spéciale  !
-\item Après avoir essayé,
+\item Tuyau : attention aux caractÃ¨res qui ont une signification spÃ©ciale  !
+\item AprÃ¨s avoir essayÃ©,
 \fbox{\href{\wlnewdoc{basics-exercise-1-solution.tex}}{%
 cliquez ici pour voir ma solution}}.
 \end{itemize}
@@ -279,12 +279,12 @@ cliquez ici pour voir ma solution}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Composition de mathématiques}
+\subsection{Composition de mathÃ©matiques}
 \begin{frame}[fragile]{\insertsubsection{}: signe de dollar}
 \begin{itemize}
-\item Pourquoi les signes de dollar \keystrokebftt{\$} sont-ils particuliers ? Nous les utilisons pour marquer les mathématiques dans le texte.\\[1ex]
+\item Pourquoi les signes de dollar \keystrokebftt{\$} sont-ils particuliers ? Nous les utilisons pour marquer les mathÃ©matiques dans le texte.\\[1ex]
 \begin{exampletwouptiny}
-% pas très bien :
+% pas trÃ¨s bien :
 Soient a et b des entiers positifs
 distincts, et soit c = a - b + 1.
 
@@ -292,8 +292,8 @@ distincts, et soit c = a - b + 1.
 Soient $a$ et $b$ des entiers positifs
 distincts, et soit $c = a - b + 1$.
 \end{exampletwouptiny}
-\item Il faut toujours utiliser les signes de dollar par paires --- un signe pour commencer l'expression mathématique, un autre pour la finir.
-\item \LaTeX{} gère l'espacement automatiquement ; il ignore vos espaces.
+\item Il faut toujours utiliser les signes de dollar par paires --- un signe pour commencer l'expression mathÃ©matique, un autre pour la finir.
+\item \LaTeX{} gÃ¨re l'espacement automatiquement ; il ignore vos espaces.
 \begin{exampletwouptiny}
 Soit $y=mx+b$ la...
 
@@ -307,7 +307,7 @@ Soit $y = m x + b$ la...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{}: notations}
 \begin{itemize}
-\item Utilisez l'accent \mbox{circonflexe} \keystrokebftt{\^} pour les exposants et le souligné \keystrokebftt{\_} pour les indices.
+\item Utilisez l'accent \mbox{circonflexe} \keystrokebftt{\^} pour les exposants et le soulignÃ© \keystrokebftt{\_} pour les indices.
 \begin{exampletwouptiny}
 $y = c_2 x^2 + c_1 x + c_0$
 \end{exampletwouptiny}
@@ -333,21 +333,21 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: équations en vedette}
+\begin{frame}[fragile]{\insertsubsection{}: Ã©quations en vedette}
 \begin{itemize}
-\item Si votre formule est longue et fait peur, \emph{présentez-la} sur une ligne à part en utilisant
+\item Si votre formule est longue et fait peur, \emph{prÃ©sentez-la} sur une ligne Ã  part en utilisant
 \cmdbegin{equation} et \cmdend{equation}.\\[2ex]
 \begin{exampletwouptiny}
-Les racines d'un polynôme de deuxième
-degré sont données par
+Les racines d'un polynÃ´me de deuxiÃ¨me
+degrÃ© sont donnÃ©es par
 \begin{equation}
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}
          {2a}
 \end{equation}
-où $a$, $b$ et $c$ sont...
+oÃ¹ $a$, $b$ et $c$ sont...
 \end{exampletwouptiny}
 \vskip 1em
-{\scriptsize Attention : même si \LaTeX{} ignore les espaces dans les formules mathématiques, il ne digère pas les lignes vides dans les équations --- n'insérez pas de ligne vide dans vos mathématiques.
+{\scriptsize Attention : mÃªme si \LaTeX{} ignore les espaces dans les formules mathÃ©matiques, il ne digÃ¨re pas les lignes vides dans les Ã©quations --- n'insÃ©rez pas de ligne vide dans vos mathÃ©matiques.
 
 }
 \end{itemize}
@@ -359,21 +359,21 @@ où $a$, $b$ et $c$ sont...
 \begin{frame}[fragile]{Interlude: environnements}
 \begin{itemize}
 \item \bftt{equation} est un \emph{environnement} --- un contexte.
-\item Une commande peut produire des sorties différentes selon le contexte.
+\item Une commande peut produire des sorties diffÃ©rentes selon le contexte.
 \begin{exampletwouptiny}
-On peut écrire
+On peut Ã©crire
 $ \Omega = \sum_{k=1}^{n} \omega_k $
 dans le texte courant, mais on peut
-aussi écrire
+aussi Ã©crire
 \begin{equation}
   \Omega = \sum_{k=1}^{n} \omega_k
 \end{equation}
 dans une formule en vedette.
 \end{exampletwouptiny}
 \vskip 2ex
-\item Notez comment le symbole $\Sigma$ est plus grand à l'intérieur de l'environnement \bftt{equation}, et comment les indices et exposants changent de position, malgré le fait que nous avons utilisé les mêmes commandes.
+\item Notez comment le symbole $\Sigma$ est plus grand Ã  l'intÃ©rieur de l'environnement \bftt{equation}, et comment les indices et exposants changent de position, malgrÃ© le fait que nous avons utilisÃ© les mÃªmes commandes.
 \vskip 1em
-{\scriptsize En fait nous pourrions aussi écrire \cmdbegin{math}\bftt{...}\cmdend{math} à la place de \rlap{\bftt{\$...\$}.}
+{\scriptsize En fait nous pourrions aussi Ã©crire \cmdbegin{math}\bftt{...}\cmdend{math} Ã  la place de \rlap{\bftt{\$...\$}.}
 
 }
 \end{itemize}
@@ -384,19 +384,19 @@ dans une formule en vedette.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Interlude: environnements}
 \begin{itemize}
-\item Les commandes \cmdbs{begin} et \cmdbs{end} sont utilisées pour créer des environnements.
+\item Les commandes \cmdbs{begin} et \cmdbs{end} sont utilisÃ©es pour crÃ©er des environnements.
 \vskip 2ex
 
-\item Les environnements \bftt{itemize} et \bftt{enumerate} créent des listes.
+\item Les environnements \bftt{itemize} et \bftt{enumerate} crÃ©ent des listes.
 \begin{exampletwouptiny}
 \begin{itemize} % pour avoir des puces
 \item Biscuits
-\item Thé
+\item ThÃ©
 \end{itemize}
 
-\begin{enumerate} % énumération
+\begin{enumerate} % Ã©numÃ©ration
 \item Biscuits
-\item Thé
+\item ThÃ©
 \end{enumerate}
 \end{exampletwouptiny}
 \end{itemize}
@@ -408,17 +408,17 @@ dans une formule en vedette.
 \begin{frame}[fragile]{Interlude: packages}
 
 \begin{itemize}
-\item Toutes les commandes et tous les environnements vus jusqu'à maintenant font partie du noyau central de \LaTeX.
+\item Toutes les commandes et tous les environnements vus jusqu'Ã  maintenant font partie du noyau central de \LaTeX.
 
-\item Les \emph{packages} sont des bibliothèques de commandes et d'environnements supplémentaires. Il y a des milliers de packages libres qui sont disponibles.
+\item Les \emph{packages} sont des bibliothÃ¨ques de commandes et d'environnements supplÃ©mentaires. Il y a des milliers de packages libres qui sont disponibles.
 
 \item Il faut charger les packages que nous souhaitons utiliser par la commande
-\cmdbs{usepackage} à placer dans le \emph{préambule}.
+\cmdbs{usepackage} Ã  placer dans le \emph{prÃ©ambule}.
 
-\item Exemple : le package \bftt{amsmath} de la Société mathématique américaine.
+\item Exemple : le package \bftt{amsmath} de la SociÃ©tÃ© mathÃ©matique amÃ©ricaine.
 \begin{minted}[fontsize=\small,frame=single]{latex}
 \documentclass{article}
-\usepackage{amsmath} % préambule
+\usepackage{amsmath} % prÃ©ambule
 \begin{document}
 % ici vous pouvez utiliser les commandes amsmath...
 \end{document}
@@ -431,13 +431,13 @@ dans une formule en vedette.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{}: exemples avec \bftt{amsmath}}
 \begin{itemize}
-\item Use \bftt{equation*} (\og équation étoilée\fg) pour les équations non numérotées.
+\item Use \bftt{equation*} (\og Ã©quation Ã©toilÃ©e\fg) pour les Ã©quations non numÃ©rotÃ©es.
 \begin{exampletwouptiny}
 \begin{equation*}
   \Omega = \sum_{k=1}^{n} \omega_k
 \end{equation*}
 \end{exampletwouptiny}
-\item \LaTeX{} traite les lettres adjacentes comme s'il s'agissait de produits de variables, ce qui n'est pas toujours ce que vous souhaitez. Le package \bftt{amsmath} definit des commandes pour la plupart des opérateurs mathématiques.
+\item \LaTeX{} traite les lettres adjacentes comme s'il s'agissait de produits de variables, ce qui n'est pas toujours ce que vous souhaitez. Le package \bftt{amsmath} definit des commandes pour la plupart des opÃ©rateurs mathÃ©matiques.
 \begin{exampletwouptiny}
 \begin{equation*} % pas bon !
  min_{x,y} (1-x)^2 + 100(y-x^2)^2
@@ -462,7 +462,7 @@ dans une formule en vedette.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{}: exemples avec \bftt{amsmath}}
 \begin{itemize}{\small
-\item Aligner une série d'équations au signe égal
+\item Aligner une sÃ©rie d'Ã©quations au signe Ã©gal
 \begin{align*}
 (x+1)^3 &= (x+1)(x+1)(x+1) \\
         &= (x+1)(x^2 + 2x + 1) \\
@@ -478,9 +478,9 @@ avec l'environnement \bftt{align*}.
         &= x^3 + 3x^2 + 3x + 1
 \end{align*}
 \end{minted}
-\item Une esperluette \keystrokebftt{\&} sépare la colonne de gauche (avant le
-$=$) de la colonne de droite (après le $=$).
-\item Un double antislash \keystrokebftt{\bs}\keystrokebftt{\bs} passe à la ligne.
+\item Une esperluette \keystrokebftt{\&} sÃ©pare la colonne de gauche (avant le
+$=$) de la colonne de droite (aprÃ¨s le $=$).
+\item Un double antislash \keystrokebftt{\bs}\keystrokebftt{\bs} passe Ã  la ligne.
 }\end{itemize}
 \end{frame}
 
@@ -491,15 +491,15 @@ $=$) de la colonne de droite (après le $=$).
 \begin{frame}[fragile]{Exercice de composition 2}
 
 \begin{block}{Composez ceci sous \LaTeX:}
-Soit $X_1, X_2, \ldots, X_n$ une suite de variables aléatoires
-indépendantes et identiquement distribuées avec 
+Soit $X_1, X_2, \ldots, X_n$ une suite de variables alÃ©atoires
+indÃ©pendantes et identiquement distribuÃ©es avec 
 $\operatorname{E}[X_i] = \mu$ et $\operatorname{Var}[X_i] = \sigma^2 < \infty$, 
 et soit
 \begin{equation*}
 S_n = \frac{1}{n}\sum_{i}^{n} X_i
 \end{equation*}
 leur moyenne. Alors quand $n$ tend vers l'infini,
-la racine carrée des variables aléatoires $\sqrt{n}(S_n - \mu)$
+la racine carrÃ©e des variables alÃ©atoires $\sqrt{n}(S_n - \mu)$
 converge en distribution vers la loi normale $N(0, \sigma^2)$.
 \end{block}
 \vskip 2ex
@@ -509,7 +509,7 @@ Cliquer ici pour l'ouvrir sous \wllogo{}}}
 \end{center}
 \begin{itemize}
 \item Tuyau : la commande pour obtenir le symbole $\infty$ est \cmdbs{infty}.
-\item Après avoir essayé,
+\item AprÃ¨s avoir essayÃ©,
 \fbox{\href{\wlnewdoc{basics-exercise-2-solution.tex}}{%
 cliquez ici pour voir ma solution}}.
 \end{itemize}
@@ -518,19 +518,19 @@ cliquez ici pour voir ma solution}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Fin de la première partie}
+\begin{frame}{Fin de la premiÃ¨re partie}
 \begin{itemize}
-\item Félicitations ! Vous avez appris comment...
+\item FÃ©licitations ! Vous avez appris comment...
 \begin{itemize}
 \item Composer du texte en \LaTeX.
-\item Utiliser un tas de commandes différentes.
-\item Gérer les erreurs quand elles surviennent.
-\item Composer de très belles formules mathématiques.
-\item Utiliser différents environnements.
+\item Utiliser un tas de commandes diffÃ©rentes.
+\item GÃ©rer les erreurs quand elles surviennent.
+\item Composer de trÃ¨s belles formules mathÃ©matiques.
+\item Utiliser diffÃ©rents environnements.
 \item Charger des packages.
 \end{itemize}
 \item C'est incroyable !
-\item Dans la partie~2, nous verrons comment utiliser \LaTeX{} pour produire des documents structurés avec des sections, des références croisées, des figures, des tables et des bibliographies. À bientôt !
+\item Dans la partie~2, nous verrons comment utiliser \LaTeX{} pour produire des documents structurÃ©s avec des sections, des rÃ©fÃ©rences croisÃ©es, des figures, des tables et des bibliographies. Ã€ bientÃ´t !
 \end{itemize}
 \end{frame}
 
