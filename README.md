@@ -77,6 +77,7 @@ The slides and source are released under the MIT license. See the LICENSE file.
 Credits
 -------
 
+* Emily G -- clarify summation bound in exercise 2
 * Diana A -- found that exercise links had broken
 * Sana A -- pointed out an error in part 1
 * Andy Roberts -- an earlier version of this course used an image from one of his articles
