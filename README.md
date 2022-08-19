@@ -24,6 +24,7 @@ Translations
 Translations in this repo:
 
 - `fr` French (thanks to Yannis Haralambous)
+- `gr` Greek (thanks to Athanasios Paraskevopoulos)
 
 Translations available outside of this repository:
 
