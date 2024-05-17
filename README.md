@@ -27,6 +27,7 @@ Translations in this repo:
 
 Translations available outside of this repository:
 
+- [Català](https://github.com/pastells/curs-latex)
 - [Chinese](https://github.com/tanjz12/latex-course)
 - [Español](https://github.com/guanucoluis/latex-course)
 - [Finnish](https://github.com/villeheilala/latex-course)
