@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[greek,english]{babel}
+
+\newcommand{\en}{\selectlanguage{english}}
+\newcommand{\gr}{\selectlanguage{greek}}
+\begin{document}
+\gr
+Έστω $X_1, X_2, \ldots, X_n$ να είναι μια ακολουθία ανεξάρτητων και
+πανομοιότυπα κατανεμημένες τυχαίες μεταβλητές με
+$\operatorname{E}[X_i] = \mu$ με
+$\operatorname{Var}[X_i] = \sigma^2 < \infty$, και έστω
+\begin{equation*}
+S_n = \frac{1}{n}\sum_{i=1}^{n} X_i
+\end{equation*}
+δηλώνουν τη μέση τιμή τους. Στη συνέχεια, καθώς το $n$ πλησιάζει το άπειρο, οι τυχαίες μεταβλητές $\sqrt{n}(S_n - \mu)$ cσυγκλίνουν στην κατανομή σε ένα κανονικό $N(0, \sigma^2)$.
+
+% bonus points: the N for normal is usually set in a caligraphic
+% font; you can get this using $\mathcal{N}(0, \sigma^2)$.
+
+\end{document}
